@@ -20,13 +20,6 @@ class Test {
     }
 }
 
-class Audio {
-    constructor (name, src) {
-        this.name = name;
-        this.src = src;
-    }
-}
-
 let link = "https://vladhaleta2023.github.io/History/";
 
 picturesBarok = [
@@ -64,94 +57,24 @@ picturesBarok = [
     new ObjectTest("Willem Claesz Heda", "Martwa natura ze złotym pucharem", ["https://vladhaleta2023.github.io/History/pictures/picturesBarok/32.jpg"]),
 ];
 
-audioMusic70 = [
-    new Audio("ABBA - Arrival", "./audio/music70/1.mp3"),
-    new Audio("AC DC - Highway To Hell", "./audio/music70/2.mp3"),
-    new Audio("Bee Gees - Spirits Having Flown", "./audio/music70/3.mp3"),
-    new Audio("Blondie - Parallel Lines", "./audio/music70/4.mp3"),
-    new Audio("Boney M - Take the Heat off Me", "./audio/music70/5.mp4"),
-    new Audio("Bruce Springsteen - Born to Run", "./audio/music70/6.mp4"),
-    new Audio("Machine Head (Deep Purple) - Smoke On The Water", "./audio/music70/7.mp3"),
-    new Audio("Made In Japan (Deep Purple)", "./audio/music70/8.mp3"),
-    new Audio("Layla and Other Assorted Love Songs", "./audio/music70/9.mp3"),
-    new Audio("Dire Straits - Communiqué", "./audio/music70/10.mp3"),
-    new Audio("Discovery", "./audio/music70/11.mp3"),
-    new Audio("Out of the Blue", "./audio/music70/12.mp3"),
-    new Audio("Duke", "./audio/music70/Genesis - Duke's Travels (Official Audio).mp3"),
-    new Audio("The Lamb Lies Down on Broadway", "./audio/music70/Genesis - The Colony Of Slippermen - Original Lamb Slide Show.mp3"),
-    new Audio("Discovery", "./audio/music70/"),
-]
-
-cosmosFactory = [
-    new Audio("Cosmos Factory - Ramble Tamble", "./audio/music70/Cosmos Factory/1CF.mp3"),
-    new Audio("Cosmos Factory - Before You Accuse Me", "./audio/music70/Cosmos Factory/2CF.mp3"),
-    new Audio("Cosmos Factory - Travelin' Band", "./audio/music70/Cosmos Factory/3CF.mp3"),
-    new Audio("Cosmos Factory - Ooby Dooby", "./audio/music70/Cosmos Factory/4CF.mp3"),
-    new Audio("Cosmos Factory - Lookin' Out My Back Door", "./audio/music70/Cosmos Factory/5CF.mp3"),
-    new Audio("Cosmos Factory - Run Through The Jungle", "./audio/music70/Cosmos Factory/6CF.mp3"),
-    new Audio("Cosmos Factory - Up Around The Bend", "./audio/music70/Cosmos Factory/7CF.mp3"),
-    new Audio("Cosmos Factory - My Baby Left Me", "./audio/music70/Cosmos Factory/8CF.mp3"),
-    new Audio("Cosmos Factory - Who'll Stop The Rain", "./audio/music70/Cosmos Factory/9CF.mp3"),
-    new Audio("Cosmos Factory - I Head It Through The Grapevine", "./audio/music70/Cosmos Factory/10CF.mp3"),
-    new Audio("Cosmos Factory - Long As I Can See The Light", "./audio/music70/Cosmos Factory/11CF.mp3"),
-]
-
-dabidBowie = [
-    new Audio("David Bowie - Five Years", "./audio/music70/David Bowie/DB1.mp3"),
-    new Audio("David Bowie - Soul Love", "./audio/music70/David Bowie/DB2.mp3"),
-    new Audio("David Bowie - Moonage Daydream", "./audio/music70/David Bowie/DB3.mp3"),
-    new Audio("David Bowie - Starman", "./audio/music70/David Bowie/DB4.mp3"),
-    new Audio("David Bowie - It Ain't Easy", "./audio/music70/David Bowie/DB5.mp3"),
-    new Audio("David Bowie - Lady Stardust", "./audio/music70/David Bowie/DB6.mp3"),
-    new Audio("David Bowie - Star", "./audio/music70/David Bowie/DB7.mp3"),
-    new Audio("David Bowie - Hang on to Yourself", "./audio/music70/David Bowie/DB8.mp3"),
-    new Audio("David Bowie - Ziggy Stardust", "./audio/music70/David Bowie/DB9.mp3"),
-    new Audio("David Bowie - Suffragette", "./audio/music70/David Bowie/DB10.mp3"),
-    new Audio("David Bowie - Rock 'n' Roll", "./audio/music70/David Bowie/DB11.mp3"),
-]
-
 music70 = [
-    new ObjectTest("ABBA", "Arrival", ["https://vladhaleta2023.github.io/History/pictures/music70/1.jpg"], [audioMusic70[0]]),
-    new ObjectTest("AC DC", "Highway To Hell", ["https://vladhaleta2023.github.io/History/pictures/music70/2.jpg"], [audioMusic70[1]]),
-    new ObjectTest("Bee Gees", "Spirits Having Flown", ["https://vladhaleta2023.github.io/History/pictures/music70/3.jpg"], [audioMusic70[2]]),
-    new ObjectTest("Blondie", "Parallel Lines", ["https://vladhaleta2023.github.io/History/pictures/music70/4.jpg"], [audioMusic70[3]]),
-    new ObjectTest("Boney M", "Take the Heat off Me", ["https://vladhaleta2023.github.io/History/pictures/music70/5.jpg"], [audioMusic70[4]]),
-    new ObjectTest("Bruce Springsteen", "Born to Run", ["https://vladhaleta2023.github.io/History/pictures/music70/6.jpg"], [audioMusic70[5]]),
-    new ObjectTest("Creedence Clearwater Revival", "Cosmos Factory", ["https://vladhaleta2023.github.io/History/pictures/music70/7.jpg"],
-        [cosmosFactory[0],
-        cosmosFactory[1],
-        cosmosFactory[2],
-        cosmosFactory[3],
-        cosmosFactory[4],
-        cosmosFactory[5],
-        cosmosFactory[6],
-        cosmosFactory[7],
-        cosmosFactory[8],
-        cosmosFactory[9],
-        cosmosFactory[10]]),
-    new ObjectTest("David Bowie", "The Rise and Fall of Ziggy Stardust and the Spiders from Mars", ["https://vladhaleta2023.github.io/History/pictures/music70/8.jpg"],
-        [
-            dabidBowie[0],
-            dabidBowie[1],
-            dabidBowie[2],
-            dabidBowie[3],
-            dabidBowie[4],
-            dabidBowie[5],
-            dabidBowie[6],
-            dabidBowie[7],
-            dabidBowie[8],
-            dabidBowie[9],
-            dabidBowie[10]
-        ]),
-    new ObjectTest("Deep Purple", "Machine Head", ["https://vladhaleta2023.github.io/History/pictures/music70/9.jpg"], [audioMusic70[6]]),
-    new ObjectTest("Deep Purple", "Made In Japan", ["https://vladhaleta2023.github.io/History/pictures/music70/10.jpg"], [audioMusic70[7]]),
-    new ObjectTest("Derek the Dominos", "Layla and Other Assorted Love Songs", ["https://vladhaleta2023.github.io/History/pictures/music70/11.jpg"], [audioMusic70[8]]),
-    new ObjectTest("Dire Straits", "Communiqué", ["https://vladhaleta2023.github.io/History/pictures/music70/12.jpg"], [audioMusic70[9]]),
-    new ObjectTest("Electric Light Orchestra", "Discovery", ["https://vladhaleta2023.github.io/History/pictures/music70/13.jpg"], [audioMusic70[10]]),
-    new ObjectTest("Electric Light Orchestra", "Out of the Blue", ["https://vladhaleta2023.github.io/History/pictures/music70/14.jpg"], [audioMusic70[11]]),
+    new ObjectTest("ABBA", "Arrival", ["https://vladhaleta2023.github.io/History/pictures/music70/1.jpg"]),
+    new ObjectTest("AC DC", "Highway To Hell", ["https://vladhaleta2023.github.io/History/pictures/music70/2.jpg"]),
+    new ObjectTest("Bee Gees", "Spirits Having Flown", ["https://vladhaleta2023.github.io/History/pictures/music70/3.jpg"]),
+    new ObjectTest("Blondie", "Parallel Lines", ["https://vladhaleta2023.github.io/History/pictures/music70/4.jpg"]),
+    new ObjectTest("Boney M", "Take the Heat off Me", ["https://vladhaleta2023.github.io/History/pictures/music70/5.jpg"]),
+    new ObjectTest("Bruce Springsteen", "Born to Run", ["https://vladhaleta2023.github.io/History/pictures/music70/6.jpg"]),
+    new ObjectTest("Creedence Clearwater Revival", "Cosmos Factory", ["https://vladhaleta2023.github.io/History/pictures/music70/7.jpg"]),
+    new ObjectTest("David Bowie", "The Rise and Fall of Ziggy Stardust and the Spiders from Mars", ["https://vladhaleta2023.github.io/History/pictures/music70/8.jpg"]),
+    new ObjectTest("Deep Purple", "Machine Head", ["https://vladhaleta2023.github.io/History/pictures/music70/9.jpg"]),
+    new ObjectTest("Deep Purple", "Made In Japan", ["https://vladhaleta2023.github.io/History/pictures/music70/10.jpg"]),
+    new ObjectTest("Derek the Dominos", "Layla and Other Assorted Love Songs", ["https://vladhaleta2023.github.io/History/pictures/music70/11.jpg"]),
+    new ObjectTest("Dire Straits", "Communiqué", ["https://vladhaleta2023.github.io/History/pictures/music70/12.jpg"]),
+    new ObjectTest("Electric Light Orchestra", "Discovery", ["https://vladhaleta2023.github.io/History/pictures/music70/13.jpg"]),
+    new ObjectTest("Electric Light Orchestra", "Out of the Blue", ["https://vladhaleta2023.github.io/History/pictures/music70/14.jpg"]),
     new ObjectTest("Emerson Like Palmer", "Pictures at an Exhibition", ["https://vladhaleta2023.github.io/History/pictures/music70/15.jpg"]),
-    new ObjectTest("Fleetwood Mac", "Rumours", ["https://vladhaleta2023.github.io/History/pictures/music70/16.jpg"], [audioMusic70[12]]),
-    new ObjectTest("Genesis ", "Duke", ["https://vladhaleta2023.github.io/History/pictures/music70/17.jpg"], [audioMusic70[13]]),
+    new ObjectTest("Fleetwood Mac", "Rumours", ["https://vladhaleta2023.github.io/History/pictures/music70/16.jpg"]),
+    new ObjectTest("Genesis ", "Duke", ["https://vladhaleta2023.github.io/History/pictures/music70/17.jpg"]),
     new ObjectTest("Genesis ", "The Lamb Lies Down on Broadway", ["https://vladhaleta2023.github.io/History/pictures/music70/18.jpg"]),
     new ObjectTest("Iggy Pop", "Lust For Life", ["https://vladhaleta2023.github.io/History/pictures/music70/19.jpg"]),
     new ObjectTest("Jean Michele Jarre", "Équinoxe", ["https://vladhaleta2023.github.io/History/pictures/music70/20.jpg"]),
