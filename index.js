@@ -7,7 +7,7 @@ class ObjectTest {
             this.audios = audios;
         }
         catch {
-            this.autor = this.name = this.picture = this.audios = "";
+            this.autor = this.name = this.picture = this.audios = "./pictures/music80/1.jpg";
         }
     }
 }
@@ -137,9 +137,61 @@ oswiecenie = [
     new ObjectTest("Michaił Łomonosow", "Chemia fizyczna, prawo zachowania masy w reakcjach chemicznych"),
 ];
 
+music80 = [
+    new ObjectTest("AC DC", "Fly on the Wall", ["./pictures/music80/1.jpg"]),
+    new ObjectTest("AC DC", "The Razors Edge", ["./pictures/music80/2.jpg"]),
+    new ObjectTest("Accept", "Metal Heart", ["./pictures/music80/3.jpg"]),
+    new ObjectTest("Bauhaus", "The Skys Gone Out", ["./pictures/music80/4.jpg"]),
+    new ObjectTest("Bob Marley and the Wailers", "Legend", ["./pictures/music80/5.jpg"]),
+    new ObjectTest("Bruce Springsteen", "Born In The U.S.A.", ["./pictures/music80/6_1.jpg", "./pictures/music80/6_2.jpg"]),
+    new ObjectTest("Cocteau Twins", "Treasure", ["./pictures/music80/7.jpg"]),
+    new ObjectTest("Dead Can Dance", "Aion", ["./pictures/music80/8.jpg"]),
+    new ObjectTest("Dead Can Dance", "Within the Realm of a Dying Sun", ["./pictures/music80/9.jpg"]),
+    new ObjectTest("Deep Purple", "Perfect Strangers", ["./pictures/music80/10_1.jpg", "./pictures/music80/10_3.jpg"]),
+    new ObjectTest("Depeche Mode", "Black Celebration", ["./pictures/music80/11.jpg"]),
+    new ObjectTest("Depeche Mode", "Some Great Reward", ["./pictures/music80/12.jpg"]),
+    new ObjectTest("Dire Straits", "Brothers in Arms", ["./pictures/music80/13.jpg"]),
+    new ObjectTest("Dire Straits", "Love Over Gold", ["./pictures/music80/14.jpg"]),
+    new ObjectTest("Electric Light Orchestra", "Time", ["./pictures/music80/15.jpg"]),
+    new ObjectTest("Frankie Goes To Hollywood", "Welcome to the Pleasuredome", ["./pictures/music80/16_1.jpg", "./pictures/music80/16_2.jpg", "./pictures/music80/16_3.jpg"]),
+    new ObjectTest("Genesis", "Abacab", ["./pictures/music80/17.jpg"]),
+    new ObjectTest("Genesis", "Genesis", ["./pictures/music80/18.jpg"]),
+    new ObjectTest("Iron Maiden", "Powerslave", ["./pictures/music80/19.jpg"]),
+    new ObjectTest("Jean-Michel Jarre", "Les Concerts en Chine", ["./pictures/music80/20.jpg"]),
+    new ObjectTest("Kate Bush", "Hounds of Love", ["./pictures/music80/21_1.jpg", "./pictures/music80/21_2.jpg"]),
+    new ObjectTest("Madonna", "Like a Virgin", ["./pictures/music80/22.jpg"]),
+    new ObjectTest("Metallica", "...And Justice for All", ["./pictures/music80/23.jpg"]),
+    new ObjectTest("Metallica", "Master of Puppets", ["./pictures/music80/24.jpg"]),
+    new ObjectTest("Michael Jackson", "Thriller", ["./pictures/music80/25_1.jpg", "./pictures/music80/25_3.jpg"]),
+    new ObjectTest("Mike Oldfield", "Crises", ["./pictures/music80/26.jpg"]),
+    new ObjectTest("Mike Oldfield", "Five Miles Out", ["./pictures/music80/27.jpg"]),
+    new ObjectTest("Peter Gabriel", "So", ["./pictures/music80/28.jpg"]),
+    new ObjectTest("Peter Gabriel", "IV", ["./pictures/music80/29.jpg"]),
+    new ObjectTest("Phil Collins", "Face Value", ["./pictures/music80/30.jpg"]),
+    new ObjectTest("Pink Floyd", "A Momentary Lapse of Reason", ["./pictures/music80/31.jpg"]),
+    new ObjectTest("Pink Floyd", "The Final Cut", ["./pictures/music80/32.jpg"]),
+    new ObjectTest("Pixies", "Surfer Rosa", ["./pictures/music80/33.jpg"]),
+    new ObjectTest("Pixies", "Doolittle", ["./pictures/music80/34.jpg"]),
+    new ObjectTest("Prince The Revolution", "Purple Rain", ["./pictures/music80/35.jpg"]),
+    new ObjectTest("Queen", "A Kind of Magic", ["./pictures/music80/36.jpg"]),
+    new ObjectTest("Queen", "Miracle", ["./pictures/music80/37.jpg"]),
+    new ObjectTest("Sinead OConnor", "The Lion and the Cobra", ["./pictures/music80/38_1.jpg", "./pictures/music80/38_2.jpg"]),
+    new ObjectTest("Sting", "The Dream of the Blue Turtles", ["./pictures/music80/39.jpg"]),
+    new ObjectTest("The Alan Parsons Project", "Eye in the Sky", ["./pictures/music80/40.jpg"]),
+    new ObjectTest("The Cure", "Disintegration", ["./pictures/music80/41_1.jpg", "./pictures/music80/41_2.jpg"]),
+    new ObjectTest("The Cure", "Kiss Me, Kiss Me, Kiss Me", ["./pictures/music80/42_1.jpg", "./pictures/music80/42_2.jpg"]),
+    new ObjectTest("The Police", "Ghost in the Machine", ["./pictures/music80/43.jpg"]),
+    new ObjectTest("The Police", "Synchronicity", ["./pictures/music80/44.jpg"]),
+    new ObjectTest("The Sisters of Mercy", "Floodland", ["./pictures/music80/45.jpg"]),
+    new ObjectTest("U2", "The Unforgettable Fire", ["./pictures/music80/46.jpg"]),
+    new ObjectTest("U2", "The Joshua Tree", ["./pictures/music80/47.jpg"]),
+    new ObjectTest("Yes", "90125", ["./pictures/music80/48_1.jpg", "./pictures/music80/48_2.jpg"]),
+];
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
+let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
 
 function getVariantsAuthor(data) {
     result = [];
@@ -187,6 +239,8 @@ function getTest(dataSelected) {
             return testMusic70;
         case "Oświecenie":
             return testOswiecenie;
+        case "Muzyka lat 80":
+            return testMusic80;
         default:
             return testPicturesBarok;
     }
