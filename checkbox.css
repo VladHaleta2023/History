@@ -1,0 +1,49 @@
+input[type=checkbox]#showImages {
+    position: relative;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 12px;
+}
+
+input[type=checkbox]#showImages:before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+
+input[type=checkbox]#showImages:checked:after {
+    content: "";
+    display: none;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+div#centerCheckBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px !important;
+    color: white;
+}
+
+label#checkBoxText {
+    margin: 0px !important;
+    padding: 0px !important;
+}

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon/history_16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon/history_32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon/history_64.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon/history_128.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon/history_256.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>History</title>
+</head>
+<style>
+    /* audio */
+    ul#audioList {
+        width: 100vw;
+        max-width: 615px;
+        margin-top: 10px !important;
+    }
+
+    li.audioElement {
+        font-size: 18px !important;
+        padding: 16px !important;
+        word-break: break-all;
+        color: black !important;
+        cursor: pointer;
+    }
+
+    .audioElement>a:hover {
+        background-color: transparent !important;
+    }
+
+    li.audioElement:hover {
+        background-color: #ccc !important;
+    }
+
+    input[type='checkbox'] {
+        width: 24px;
+        height: 24px;
+        margin: 0px;
+        cursor: pointer;
+    }
+
+    .btn#Verification:hover {
+        color: white;
+    }
+
+    body {
+        position: relative;
+        background-color: #161b22;
+        color: white;
+    }
+    
+    div#img>img {
+        margin-bottom: 12px !important;
+    }
+
+    header {
+        background-color: #0d1117;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .selectMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menuFrontend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    main {
+        font-size: 18px;
+        padding: 20px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Menu, #Data {
+        margin: 10px;
+    }
+
+    #myInputName, #myInputAutor {
+        font-size: 18px !important;
+        padding: 20px !important;
+        margin-top: -6px;
+        border: 0;
+        border-radius: 0;
+        background: #f1f1f1;
+    }
+
+    #Generuj {
+        font-size: 24px !important;
+        color: white;
+        margin: 10px;
+        background-color:darkcyan;
+    }
+
+    #Variant, #VariantHelper {
+        font-size: 24px !important;
+        color: white;
+        margin: 10px;
+        background-color:rebeccapurple;
+    }
+
+    #Dalej {
+        margin: 10px;
+        font-size: 24px !important;
+        color: white;
+        padding: 8px 24px;
+        background-color:rgb(0, 139, 53);
+    }
+
+    .dropdown-menu>div#listAutor>li>a, .dropdown-menu>div#listName>li>a {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    .dropdown-menu>div#listAutor>li>a:hover, .dropdown-menu>div#listName>li>a:hover {
+        background-color: #ccc;
+    }
+
+    .dropdown-menu>div#listAutor>li>a, .dropdown-menu>div#listName>li>a {
+        font-size: 18px !important;
+        padding: 16px !important;
+        word-break: break-all;
+        white-space: pre-line;
+    }
+
+    .dropdown-menu {
+        font-size: 18px !important;
+        max-width: 800px;
+        width: 100%;
+        word-break: break-all;
+        padding: 0px !important;
+    }
+
+    .inputBtn {
+        background-color: rgb(88, 175, 251);
+        color: white !important;
+        font-size: 20px !important;
+        word-break: break-all;
+        white-space: pre-line;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menuList {
+        width: 160px !important;
+    }
+
+    #menuData {
+        width: 210px !important;
+    }
+
+    #menuInput {
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    span.caret {
+        border-width: 7px !important;
+    }
+
+    .textMenu {
+        font-size: 24px; 
+        color: white;
+        margin: 10px;
+    }
+
+    .showResult#correct {
+        background-color: rgba(156, 255, 156, 0.6);
+    }
+
+    .showResult#uncorrect {
+        background-color: rgba(255, 169, 156, 0.6);
+    }
+
+    .showResult {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        left: 0;
+        font-size: 64px;
+        color: white;
+        word-break: break-all;
+        white-space: pre-line;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    div#results {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#division {
+        text-align: center;
+        font-size: 48px !important;
+    }
+
+    div#procent {
+        font-size: 64px !important;
+        text-align: center;
+    }
+
+    .correctAnswer {
+        padding-left: 8px;
+        font-weight: normal;
+        color: rgb(0, 140, 0);
+    }
+
+    #uncorrectAnswer {
+        font-size: 48px !important;
+    }
+
+    .res.correctAnswer {
+        padding-left: 8px;
+        font-weight: normal;
+        color: rgb(0, 140, 0);
+    }
+
+    div.form-groupRes {
+        width: 100%;
+        padding: 14px !important;
+        text-align: left !important;
+        color: black !important;
+        border: 1px solid black;
+    }
+
+    div.form-groupRes, .res label {
+        word-break: break-all !important;
+        margin: 0px !important;
+        background-color: white !important;
+    }
+
+    #Back {
+        background-color: rgb(255, 74, 74);
+        padding: 8px 24px !important;
+        font-size: 18px !important;
+    }
+
+    div#Helper {
+        width: 100vw; background-color:lightyellow; color: black; font-size: 24px;
+        z-index: 2;
+        padding: 10px 16px;
+        max-width: 800px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    #textHelper {
+        text-align: center;
+        font-size: 32px;
+        width: 80%;
+        max-width: 800px;
+        word-break: break-all;
+    }
+
+    div#HelperBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        padding: 20px !important;
+    }
+
+    #audioSrc {
+        width: 500px;
+    }
+
+    @media only screen and (max-width: 652px) {
+        div.menuFrontend#audio {
+            justify-content: left !important;
+        }
+
+        ul#audioList {
+            width: calc(100vw - 36.8px) !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        ul#audioList {
+            margin-top: 4px !important;
+        }
+
+        audio#audioSrc {
+            width: 100%;
+        }
+    }
+</style>
+<body onload="Main()" style="position: relative; box-sizing: border-box;">
+    <div id="Main">
+        <div class="showResult"><div>Uncorrect!</div></div>
+        <div style="display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;">
+            <div id="Helper" style="position: relative;">
+                <span style="color: red">Wersja programu 2.0</span>
+                <br>
+                <div style="width: 100%; display: flex; justify-content: end;">
+                    <button onclick="exitHelper()" style="margin-right: 12px;">
+                        Zamknij
+                    </button>
+                    <button onclick="closeHelper()">
+                        Zobaczyć zmiany
+                    </button>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="menuFrontend">
+                <div class="selectMenu" id="selectMenuData">
+                    <span class="textMenu">Dane:</span>
+                    <div class="dropdown" id="Data">
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Malarstwo Baroku
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Malarstwo Baroku</a></li>
+                            <li><a href="#">Muzyka lat 70</a></li>
+                            <li><a href="#">Oświecenie</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="selectMenu" id="selectMenuKnow">
+                    <span class="textMenu">Wiemy:</span>
+                    <div class="dropdown" id="Menu">
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuList" data-toggle="dropdown">Tylko Nazwę
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Nic</a></li>
+                            <li><a href="#">Tylko Nazwę</a></li>
+                            <li><a href="#">Tylko Autora</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menuFrontend">
+                <button onclick="Next()" type="button" class="btn" id="Dalej">Dalej</button>
+            </div>
+            <div class="menuFrontend">
+                <button type="button" class="btn" id="Variant" onclick="changeVariant()"><span class="glyphicon glyphicon-cog" style="margin-right: 6px;"></span><span id="text">Select</span></button>
+                <button type="button" class="btn" id="Generuj">
+                    <a href="./table.html" target="_self" style="text-decoration: none; color: white;"><span class="glyphicon glyphicon-th"></span> Pokaż tabelę</a>
+                </button>
+            </div>
+            <div class="menuFrontend" style="margin: 5px 0px; margin-top: 24px;">
+                <div id="centerCheckBox">
+                    <input type="checkbox" name="showImages" id="showImages" checked onclick="showImages(this)">
+                    <label for="showImages" id="checkBoxText">Pokazywać zdjęcia</label>
+                </div>
+            </div>
+            <div class="menuFrontend" id="audio">
+                <div class="dropdown" id="AudioData" style="margin: 5px 0px; margin-right: 12px;">
+                    <button class="btn dropdown-toggle inputBtn" type="button" id="menuDataAudio" data-toggle="dropdown">Wybór
+                    <span class="caret" style="margin-left: 6px;"></span></button>
+                    <ul class="dropdown-menu" id="audioList">
+                        
+                    </ul>
+                </div>
+                <audio controls id="audioSrc">
+                    
+                </audio>
+            </div>
+        </header>
+        <main>
+            <h1></h1>
+            <div style="width: 100%; max-width: 800px;" id="mainBodyTest">
+                <div class="form-group">
+                    <label for="autor"><span id="firstLabel"></span><span style="display: none;" class="correctAnswer" id="autor">Agnolo Bronzino</span></label>
+                    <div class="dropdown" id="autor">
+                        <div id="selectAutor">
+                            <button class="btn dropdown-toggle inputBtn" type="button" id="menuInput" data-toggle="dropdown"><span id="text">Agnolo Bronzino</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <input class="form-control" id="myInputAutor" type="text" placeholder="Search..">
+                                <div id="listAutor" style="position: absolute; left: -30px;"></div>
+                            </ul>
+                        </div>
+                        <div id="inputAutor" style="display: none;">
+                            <button class="btn" onclick="verifyAutor(this)" style="background-color: cornflowerblue; font-size: 24px; margin-bottom: 12px;" id="Verification">Zweryfikować</button>
+                            <textarea name="input" id="input" cols="30" rows="6" style="resize: none; color: black; width: 100%; max-width: 800px; font-size: 20px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name"><span id="secondLabel"></span><span class="correctAnswer" id="name">Alegoria z Wenus i Kupidynem</span></label>
+                    <div class="dropdown" id="name" style="display: none;">
+                        <div id="selectName">
+                            <button class="btn dropdown-toggle inputBtn" type="button" id="menuInput" data-toggle="dropdown">
+                                <span id="text">Alegoria z Wenus i Kupidynem</span>
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <input class="form-control" id="myInputName" type="text" placeholder="Search..">
+                                <div id="listName"></div>
+                            </ul>
+                        </div>
+                        <div id="inputName" style="display: none;">
+                            <button class="btn" onclick="verifyName()" style="background-color: cornflowerblue; font-size: 24px; margin-bottom: 12px;" id="Verification">Zweryfikować</button>
+                            <textarea name="input" id="input" cols="30" rows="6" style="resize: none; color: black; width: 100%; max-width: 800px; font-size: 20px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="img">
+
+                </div>
+            </div>
+            <div id="results" style="display: none; justify-content: center; align-items: center;"></div>
+        </main>
+    </div>
+    <div id="HelperBody" style="display: none;">
+        <h1 style="text-align: center; color: red">Wersja programu 2.0</h1>
+        <br>
+        <div id="textHelper">
+            Dodał się nowy przycisk <span style="font-weight: bold; margin-left: 6px;">Select</span>, który umożliwia zmiany trybu testu!
+        </div>
+        <br>
+        <div id="textHelper">
+            Proszę nacisnąć na przycisk <span style="font-weight: bold; margin: 0px 6px;">Select</span> i zobaczyć co się zmieni)
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="button" class="btn" id="VariantHelper" onclick="changeVariantHelper()"><span class="glyphicon glyphicon-cog" style="margin-right: 6px;"></span><span id="text">Select</span></button>
+        </div>
+        <br>
+        <div id="textHelper">
+            Widzimy że tekst przycisku się zmnienia. Z trybu select do trybu input.
+        </div>
+        <br>
+        <div id="textHelper">
+            <span style="color: cornflowerblue;">Tryb Select:</span>
+        </div>
+        <div id="textHelper">
+            Daje możliwośc wyboru ze wszystkich dostępnych odpowiedzi.
+        </div>
+        <div style="width: 80%; display: flex; justify-content: center; align-items: center; padding: 20px;">
+            <div class="form-group" style="width: 100%; max-width: 800px;">
+                <label for="autor"><span id="firstLabel" style="font-size: 24px;">Autor</span><span style="display: none;" class="correctAnswer" id="autor">Diego Velázquez</span></label>
+                <div class="dropdown" id="autor">
+                    <div id="selectAutor">
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuInput" data-toggle="dropdown"><span id="text">Agnolo Bronzino</span>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <input class="form-control" id="myInputAutor" type="text" placeholder="Search..">
+                            <div id="listAutor"><li onclick="selectAnswer(this)"><a href="#">Agnolo Bronzino</a></li><li onclick="selectAnswer(this)"><a href="#">Antoon van Dyck</a></li><li onclick="selectAnswer(this)"><a href="#">Caravaggio</a></li><li onclick="selectAnswer(this)"><a href="#">David Teniers (młodszy)</a></li><li onclick="selectAnswer(this)"><a href="#">Diego Velázquez</a></li><li onclick="selectAnswer(this)"><a href="#">El Greco</a></li><li onclick="selectAnswer(this)"><a href="#">Giuseppe Arcimboldo</a></li><li onclick="selectAnswer(this)"><a href="#">Jacopo Tintoretto</a></li><li onclick="selectAnswer(this)"><a href="#">Jan Vermeer</a></li><li onclick="selectAnswer(this)"><a href="#">Nicolas Poussin</a></li><li onclick="selectAnswer(this)"><a href="#">Peter Paul Rubens</a></li><li onclick="selectAnswer(this)"><a href="#">Rembrand</a></li><li onclick="selectAnswer(this)"><a href="#">Willem Claesz Heda</a></li></div>
+                        </ul>
+                    </div>
+                    <div id="inputAutor" style="display: none;">
+                        <button class="btn" onclick="verifyAutor(this)" style="background-color: cornflowerblue; font-size: 24px; margin-bottom: 12px;" id="Verification">Zweryfikować</button>
+                        <textarea name="input" id="input" cols="30" rows="6" style="resize: none; color: black; width: 100%; max-width: 800px; font-size: 20px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="textHelper">
+            <span style="color: cornflowerblue;">Tryb Input:</span>
+        </div>
+        <div id="textHelper">
+            Daje możliwośc napisania tekstu, a następnie po naciśnięciu przycisku <br><span style="font-weight: bold;">Zweryfikować</span>
+            daje możliwość pokazywania dokładnej odpowiedzi.
+        </div>
+        <div style="width: 80%; display: flex; justify-content: center; align-items: center; padding: 20px;">
+            <div class="form-group" style="width: 100%; max-width: 800px;">
+                <label for="autor"><span id="firstLabel" style="font-size: 24px;">Autor</span><span style="display: none;" class="correctAnswerHelper" id="autor"><span style="font-size: 24px; color:rgb(0, 139, 53); margin-left: 6px;">Rembrand</span></span></label>
+                <div class="dropdown" id="autor">
+                    <div id="selectAutor" style="display: none;">
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuInput" data-toggle="dropdown"><span id="text">Agnolo Bronzino</span>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <input class="form-control" id="myInputAutor" type="text" placeholder="Search..">
+                            <div id="listAutor"><li onclick="selectAnswer(this)"><a href="#">Agnolo Bronzino</a></li><li onclick="selectAnswer(this)"><a href="#">Antoon van Dyck</a></li><li onclick="selectAnswer(this)"><a href="#">Caravaggio</a></li><li onclick="selectAnswer(this)"><a href="#">David Teniers (młodszy)</a></li><li onclick="selectAnswer(this)"><a href="#">Diego Velázquez</a></li><li onclick="selectAnswer(this)"><a href="#">El Greco</a></li><li onclick="selectAnswer(this)"><a href="#">Giuseppe Arcimboldo</a></li><li onclick="selectAnswer(this)"><a href="#">Jacopo Tintoretto</a></li><li onclick="selectAnswer(this)"><a href="#">Jan Vermeer</a></li><li onclick="selectAnswer(this)"><a href="#">Nicolas Poussin</a></li><li onclick="selectAnswer(this)"><a href="#">Peter Paul Rubens</a></li><li onclick="selectAnswer(this)"><a href="#">Rembrand</a></li><li onclick="selectAnswer(this)"><a href="#">Willem Claesz Heda</a></li></div>
+                        </ul>
+                    </div>
+                    <div id="inputAutor" style="display: block;">
+                        <button class="btn" onclick="verifyAutorHelper(this)" style="background-color: cornflowerblue; font-size: 24px; margin-bottom: 12px;" id="Verification">Zweryfikować</button>
+                        <textarea name="input" id="input" cols="30" rows="6" style="resize: none; color: black; width: 100%; max-width: 800px; font-size: 20px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+            <br>
+            <div id="textHelper">
+                <span style="color: cornflowerblue;">Funkcja pokazywania zdjęcia:</span>
+            </div>
+            <div id="textHelper">
+                Umożliwia ukrywanie lub pokazywanie zdjęć.
+            </div>
+            <div id="centerCheckBox">
+                <input type="checkbox" name="showImages" id="showImages" checked onclick="showImages(this)">
+                <label for="showImages" id="checkBoxText">Pokazywać zdjęcia</label>
+            </div>
+            <br>
+            <img src="./pictures/picturesBarok/1.jpg" alt="image">
+            <br>
+            <img src="./pictures/picturesBarok/20.jpg" alt="image">
+        </div>
+        <br>
+        <br>
+        <div style="width: calc(100vw-40px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+            <div id="textHelper">
+                <span style="color: cornflowerblue;">Funkcja Audio:</span>
+            </div>
+            <div id="textHelper">
+                Umożliwia przesłuchania muzyki tego autora
+            </div>
+            <div class="dropdown" id="AudioData" style="margin: 5px 0px; margin-right: 12px;">
+                <button class="btn dropdown-toggle inputBtn" type="button" id="menuDataAudio" data-toggle="dropdown">Wybór
+                <span class="caret" style="margin-left: 6px;"></span></button>
+                <ul class="dropdown-menu" id="audioList" style="width: 100px !important;">
+                    <li style="font-size: 24px; color: black; cursor: pointer;">ABBA</li>
+                </ul>
+            </div>
+            <audio controls id="audioSrc" style="width: 80vw !important;">
+                <source src="./audio/music70/10.mp4" type="type/mpeg">
+            </audio>
+        </div>
+        <br>
+        <div style="display: flex; justify-content: center; width: calc(100vw-40px);">
+            <button onclick="exitHelper()" style="background-color: red; color: white; font-size: 24px; border: 0px; padding: 4px 18px;">Wróć</button>
+        </div>
+        <br>
+    </div>
+</body>
+<script src="index.js"></script>
+<script>
+    var menu = "Tylko Nazwę", autor = "Agnolo Bronzino", name = "Alegoria z Wenus i Kupidynem", img="/pictures/1.jpg", dataSelected = "Malarstwo Baroku", data = testPicturesBarok.data;
+    let selectedTest = testPicturesBarok, variant = "select", selectedMenuList = "Tylko Nazwę", dataIndex = undefined;
+
+    // Audio
+    function selectAudio(audio) {
+        for (let i = 0; i < data[dataIndex].audios.length; i++) {
+            if (data[dataIndex].audios[i].name == String(audio.innerHTML)) {
+                document.querySelector("audio#audioSrc").innerHTML = `<source src="${String(data[dataIndex].audios[i].src)}" type="audio/mpeg">`;
+                document.querySelector("audio#audioSrc").load();
+            }
+        }
+    }
+
+    function showImages(checkBox) {
+        let images = document.getElementsByTagName("img");
+
+        if (checkBox.checked) {
+            for (let i = 0; i < images.length; i++)
+                images[i].style.display = "block";
+        }
+        else {
+            for (let i = 0; i < images.length; i++)
+                images[i].style.display = "none";
+        }
+    }
+
+    function verifyAutor() {
+        document.querySelector("span.correctAnswer#autor").style.display = "inline-block";
+    }
+
+    function verifyName() {
+        document.querySelector("span.correctAnswer#name").style.display = "inline-block";
+    }
+
+    // Helper
+
+    function changeVariantHelper() {
+        let btnVariant = document.getElementById("VariantHelper");
+        if (btnVariant.querySelector("span#text").innerHTML == "Select") {
+            variant = "input";
+            btnVariant.querySelector("span#text").innerHTML = "Input";
+        }
+        else {
+            variant = "select";
+            btnVariant.querySelector("span#text").innerHTML = "Select";
+        }
+    }
+
+    function verifyAutorHelper() {
+        document.querySelector("span.correctAnswerHelper#autor").style.display = "inline-block";
+    }
+    
+    function exitHelper() {
+        document.documentElement.scrollTop = 0;
+        document.querySelector("div#Main").style.display = "block";
+        document.querySelector("div#HelperBody").style.display = "none";
+        try {
+            document.querySelector("div#Helper").remove();
+        }
+        catch {
+
+        }
+    }
+
+    function closeHelper() {
+        document.querySelector("div#Main").style.display = "none";
+        document.querySelector("div#HelperBody").style.display = "flex";
+        try {
+            document.querySelector("div#Helper").remove();
+        }
+        catch {
+
+        }
+    }
+
+    // Helper
+    
+    function changeVariant() {
+        let btnVariant = document.getElementById("Variant");
+        if (btnVariant.querySelector("span#text").innerHTML == "Select") {
+            variant = "input";
+            btnVariant.querySelector("span#text").innerHTML = "Input";
+            document.getElementById("selectAutor").style.display = "none";
+            document.getElementById("selectName").style.display = "none";
+            document.getElementById("inputAutor").style.display = "block";
+            document.getElementById("inputName").style.display = "block";
+        }
+        else {
+            variant = "select";
+            btnVariant.querySelector("span#text").innerHTML = "Select";
+            document.getElementById("selectAutor").style.display = "block";
+            document.getElementById("selectName").style.display = "block";
+            document.getElementById("inputAutor").style.display = "none";
+            document.getElementById("inputName").style.display = "none";
+        }
+
+        if (selectedMenuList == "Nic") {
+            document.querySelector("span.correctAnswer#autor").style.display = "none";
+            document.querySelector("span.correctAnswer#name").style.display = "none";
+        }
+        else if (selectedMenuList == "Tylko Autora") {
+            document.querySelector("span.correctAnswer#name").style.display = "none";
+        }
+        else {
+            document.querySelector("span.correctAnswer#autor").style.display = "none";
+        }
+    }
+
+    $("#Generuj").click(function() {
+        localStorage.setItem('dataSelected', dataSelected);
+        localStorage.setItem('firstLabel', selectedTest.firstLabel);
+        localStorage.setItem('secondLabel', selectedTest.secondLabel);
+    });
+
+    function setVariants(data) {
+        let variantsAutor = document.querySelector("div#autor>div#selectAutor>ul.dropdown-menu>div#listAutor");
+        let variantsName = document.querySelector("div#name>div#selectName>ul.dropdown-menu>div#listName");
+            variantsAutor.innerHTML = 
+                getHTMLVariants(getVariantsAuthor(data));
+            variantsName.innerHTML = 
+                getHTMLVariants(getVariantsName(data));
+    }
+
+    $(document).ready(function(){
+      $("#myInputAutor").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+    $(document).ready(function(){
+      $("#myInputName").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".dropdown-menu li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+    $("#Menu>.dropdown-menu>li").on("click", function() {
+        selectedMenuList = menu = $(this).text();
+        $("#Menu>.btn").text(menu);
+        $("#Menu>.btn").append(`<span class="caret" style="margin-left: 0.2em !important;
+        border-width: 6px !important;"></span>`);
+
+        if (menu == "Tylko Nazwę") {
+            document.querySelector("span.correctAnswer#autor").style.display = "none";
+            document.querySelector("div.dropdown#autor").style.display = "block";
+            document.querySelector("span.correctAnswer#name").style.display = "inline";
+            document.querySelector("div.dropdown#name").style.display = "none";
+        }
+        else if (menu == "Tylko Autora") {
+            document.querySelector("span.correctAnswer#autor").style.display = "inline";
+            document.querySelector("div.dropdown#autor").style.display = "none";
+            document.querySelector("span.correctAnswer#name").style.display = "none";
+            document.querySelector("div.dropdown#name").style.display = "block";
+        }
+        else {
+            document.querySelector("span.correctAnswer#autor").style.display = "none";
+            document.querySelector("div.dropdown#autor").style.display = "block";
+            document.querySelector("span.correctAnswer#name").style.display = "none";
+            document.querySelector("div.dropdown#name").style.display = "block";
+        }
+        changeVariant();
+        changeVariant();
+    });
+
+    $("#Data>.dropdown-menu>li").on("click", function() {
+        dataSelected = $(this).text();
+        $("#Data>.btn").text(dataSelected);
+        $("#Data>.btn").append(`<span class="caret" style="margin-left: 0.2em !important;
+        border-width: 6px !important;"></span>`);
+
+        data = getTable(dataSelected);
+
+        Main(true);
+    });
+
+    function selectAnswer(li) {
+        document.getElementById("myInputAutor").value = "";
+        document.getElementById("myInputName").value = "";
+        let text = String(li.querySelector("a").innerHTML);
+        let dropDown = li.parentNode.parentNode.parentNode;
+        if (dropDown.id == "autor") {
+            autor = text;
+            dropDown.querySelector(".btn>#text").innerHTML = text;
+        }
+        else {
+            name = text;
+            dropDown.querySelector(".btn>#text").innerHTML = text;
+        }
+
+        let listAutor = document.querySelector("#listAutor"), listName = document.querySelector("#listName");
+        listAutor.innerHTML = getHTMLVariants(getVariantsAuthor(data));
+        listName.innerHTML = getHTMLVariants(getVariantsName(data));
+    }
+
+    var results = [];
+
+    function goToMainBodyTest() {
+        document.getElementById("mainBodyTest").style.display = "block";
+        document.getElementsByTagName("h1")[0].style.display = "inline";
+        document.getElementById("Dalej").style.display = "block";
+        document.getElementById("results").style.display = "none";
+        document.getElementById("results").innerHTML = "";
+        document.querySelector("div#selectMenuData").style.display = "flex";
+        document.querySelector("div#selectMenuKnow").style.display = "flex";
+        document.querySelector("button#Variant").style.display = "block";
+    }
+
+    function showResults() {
+        document.getElementById("mainBodyTest").style.display = "none";
+        document.getElementsByTagName("h1")[0].style.display = "none";
+        document.getElementById("Dalej").style.display = "none";
+        document.getElementById("results").style.display = "flex";
+
+        let corAnswers = 0;
+        for (let i = 0; i < results.length; i++)
+            if (results[i][0] == true)
+                corAnswers++; 
+
+        document.getElementById("results").innerHTML +=
+        `<div id="procent">${Math.round(parseFloat(corAnswers*100/results.length))}%</div>`;
+        document.getElementById("results").innerHTML +=
+        `<br><div id="division">${corAnswers}/${results.length}</div><br>`;
+        document.getElementById("results").innerHTML +=
+        `<div>
+            <div class="progress" style="width: calc(100vw - 40px); max-width: 800px; background-color: rgb(255, 122, 122);">
+                <div class="progress-bar" style="width:${Math.round(parseFloat(corAnswers*100/results.length))}%; background-color: rgb(117, 255, 117);"></div>
+            </div>
+        </div>`;
+        document.getElementById("results").innerHTML +=
+        `<button type="button" class="btn inputBtn" id="Back" onclick="goToMainBodyTest()">Powtórzyć</button>
+        <br>`
+
+        for (i = 0; i < results.length; i++) {
+            let index = results[i][1];
+
+            if (results[i][0] == true) {
+                document.getElementById("results").innerHTML +=
+                `<div id="resElement" style="max-width: 800px; width: calc(100vw-40px);">`;
+                    if (data[index]['pictures'] != "" && data[index]['pictures'] != undefined) {
+                        for (let j = 0; j < data[index]['pictures'].length; j++) {
+                            document.getElementById("results").innerHTML += 
+                                `<img src="${data[index]['pictures'][j]}" alt="image" style="width: calc(100vw - 40px); max-width: 800px;">`;
+                        }
+                    }
+                    document.getElementById("results").innerHTML +=
+                    `<div class="form-groupRes">
+                        <label class="res" for="autor">${selectedTest.firstLabel}(Dokładna/Twoja):<span class="correctAnswer" id="autor">${data[index]['autor']}</span></label>
+                    </div>
+                    <div class="form-groupRes">
+                        <label class="res" for="name">${selectedTest.secondLabel}(Dokładna/Twoja):<span class="correctAnswer" id="name">${data[index]['name']}</span></label>
+                    </div>
+                </div>
+                <br>`;
+            }
+            else {
+                let nameHTML, autorHTML;
+
+                if (results[i][2] == data[index]['autor']) {
+                    autorHTML = `
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="autor">${selectedTest.firstLabel}(Dokładna/Twoja):<span class="correctAnswer" id="autor">${data[index]['autor']}</span></label>
+                    </div>`;
+                }
+                else {
+                    autorHTML = `
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="autor">${selectedTest.firstLabel}(Twoja):<span class="correctAnswer" id="autor" style="color: red;">${results[i][2]}</span></label>
+                    </div>
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="autor">${selectedTest.firstLabel}(Dokładna):<span class="correctAnswer" id="autor">${data[index]['autor']}</span></label>
+                    </div>`;
+                }
+
+                if (results[i][3] == data[index]['name']) {
+                    nameHTML = `
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="name">${selectedTest.secondLabel}(Dokładna/Twoja):<span class="correctAnswer" id="name">${data[index]['name']}</span></label>
+                    </div>`;
+                }
+                else {
+                    nameHTML = `
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="autor">${selectedTest.secondLabel}(Twoja):<span class="correctAnswer" id="name" style="color: red;">${results[i][3]}</span></label>
+                    </div>
+                    <div class="form-groupRes" id="result">
+                        <label class="res" for="name">${selectedTest.secondLabel}(Dokładna):<span class="correctAnswer" id="name">${data[index]['name']}</span></label>
+                    </div>`;
+                }
+
+                document.getElementById("results").innerHTML +=
+                `<div id="resElement" style="max-width: 800px; width: calc(100vw-40px);">`;
+                    if (data[index]['pictures'] != "" && data[index]['pictures'] != undefined) {
+                        for (let j = 0; j < data[index]['pictures'].length; j++) {
+                            document.getElementById("results").innerHTML += 
+                                `<img src="${data[index]['pictures'][j]}" alt="image" style="width: calc(100vw - 40px); max-width: 800px;">`;
+                        }
+                    }
+                    document.getElementById("results").innerHTML += `${autorHTML}
+                    ${nameHTML}
+                </div>
+                <br>`;
+            }
+        }
+    }
+
+    function Main(changeTest = false) {
+        let firstLabel = document.getElementById("firstLabel"), secondLabel = document.getElementById("secondLabel");
+        let img = document.getElementById("img");
+        img.innerHTML = "";
+        let h1 = document.getElementsByTagName("h1")[0];
+        let textAutor = document.querySelector("span.correctAnswer#autor");
+        let textName = document.querySelector("span.correctAnswer#name");
+        let audioList = document.querySelector("ul#audioList");
+
+        if (changeTest) {
+            buffer = [];
+            results = [];
+        }
+
+        selectedTest = getTest(dataSelected);
+        data = selectedTest.data, firstLabel.innerHTML = selectedTest.firstLabel, secondLabel.innerHTML = selectedTest.secondLabel;
+
+        if (buffer.length == data.length) {
+            if (variant != "input")
+                showResults();
+            else {
+                document.querySelector("button#Variant").style.display = "block";
+                document.querySelector("div#selectMenuData").style.display = "flex";
+                document.querySelector("div#selectMenuKnow").style.display = "flex";
+            }
+            buffer = [];
+            results = [];
+        }
+
+        h1.innerHTML = String(buffer.length + 1) + "/" + String(data.length);
+
+        setVariants(data);
+
+        let btnAuthor = document.querySelector("div.dropdown#autor>div#selectAutor>button#menuInput>span#text").innerHTML = data[0].autor;
+        let btnName = document.querySelector("div.dropdown#name>div#selectName>button#menuInput>span#text").innerHTML = data[0].name;
+
+        while (true) {
+            let index = dataIndex = getRandomInt(data.length);
+            if(checkBuffer(index)) {
+                buffer.push(index);
+                if (data[index]['pictures'] != "" && data[index]['pictures'] != undefined) {
+                    for (let j = 0; j < data[index]['pictures'].length; j++)
+                        img.innerHTML += `<img src="${data[index]['pictures'][j]}" alt="image">`;
+                }
+                if (data[index]['audios'] != "" && data[index]['audios'] != undefined) {
+                    document.querySelector("div.menuFrontend#audio").style.display = "flex";
+                    audioList.innerHTML = getHTMLAudios(data[index]['audios']);
+                    document.querySelector("audio#audioSrc").innerHTML = `<source src="${String(data[index].audios[0].src)}" type="audio/mpeg">`;
+                    document.querySelector("audio#audioSrc").load();
+                }
+                else {
+                    document.querySelector("div.menuFrontend#audio").style.display = "none";
+                }
+                textAutor.innerHTML = `${data[index]['autor']}`;
+                textName.innerHTML = `${data[index]['name']}`;
+                return;
+            }
+        }
+    }
+
+    function Next() {
+        document.querySelector("div#inputAutor>textarea").value = "";
+        document.querySelector("div#inputName>textarea").value = "";
+
+        document.querySelector("button#Variant").style.display = "none";
+        document.querySelector("div#selectMenuData").style.display = "none";
+        document.querySelector("div#selectMenuKnow").style.display = "none";
+        document.getElementById("myInputAutor").value = document.getElementById("myInputName").value = "";
+
+        if (variant == "input") {
+            if (selectedMenuList == "Nic") {
+                document.querySelector("span.correctAnswer#autor").style.display = "none";
+                document.querySelector("span.correctAnswer#name").style.display = "none";
+            }
+            else if (selectedMenuList == "Tylko Autora") {
+                document.querySelector("span.correctAnswer#name").style.display = "none";
+            }
+            else {
+                document.querySelector("span.correctAnswer#autor").style.display = "none";
+            }
+            Main();
+            return;
+        }
+
+        let index = buffer[buffer.length - 1];
+        let element = data[index];
+
+        if (menu == "Tylko Nazwę") {
+            autor = document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML;
+            name = document.querySelector("span.correctAnswer#name").innerHTML;
+            if (autor == element['autor']) {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = "Correct!";
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(156, 255, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([true, index, autor, name]);
+            }
+            else {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = `Uncorrect!<br><span id="uncorrectAnswer">${selectedTest.firstLabel}:<br>${element['autor']}</span>`;
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(255, 169, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([false, index, autor, name]);
+            }
+
+            setTimeout(()=> {
+                document.querySelector("div.showResult").style.display = "none";
+                document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML = "Agnolo Bronzino";
+                document.querySelector("div.dropdown#name>div#selectName>button>span#text").innerHTML = "Alegoria z Wenus i Kupidynem";
+                Main();
+            }, 2000);
+        }
+        else if (menu == "Tylko Autora") {
+            autor = document.querySelector("span.correctAnswer#autor").innerHTML;
+            name = document.querySelector("div.dropdown#name>div#selectName>button>span#text").innerHTML;
+            if (name == element['name']) {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = "Correct!";
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(156, 255, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([true, index, autor, name]);
+            }
+            else {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = `Uncorrect!<br><span id="uncorrectAnswer">${selectedTest.secondLabel}:<br>${element['name']}</span>`;
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(255, 169, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([false, index, autor, name]);
+            }
+
+            setTimeout(()=> {
+                document.querySelector("div.showResult").style.display = "none";
+                document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML = "Agnolo Bronzino";
+                document.querySelector("div.dropdown#name>div#selectName>button>span#text").innerHTML = "Alegoria z Wenus i Kupidynem";
+                Main();
+            }, 2000);
+        }
+        else {
+            autor = document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML;
+            name = document.querySelector("div.dropdown#name>div#selectName>button>span#text").innerHTML;
+            if (name == element['name'] && autor == element['autor']) {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = "Correct!";
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(156, 255, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([true, index, autor, name]);
+            }
+            else {
+                document.querySelector("div.showResult").style.display = "flex";
+                document.querySelector("div.showResult>div").innerHTML = `Uncorrect!<br><span id="uncorrectAnswer">${selectedTest.firstLabel}:<br>${element['autor']}<br>${selectedTest.secondLabel}:<br>${element['name']}</span>`;
+                document.querySelector("div.showResult").style.backgroundColor = "rgba(255, 169, 156, 0.6)";
+                document.documentElement.scrollTop = 0;
+                results.push([false, index, autor, name]);
+            }
+
+            setTimeout(()=> {
+                document.querySelector("div.showResult").style.display = "none";
+                document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML = "Agnolo Bronzino";
+                document.querySelector("div.dropdown#name>div#selectName>button>span#text").innerHTML = "Alegoria z Wenus i Kupidynem";
+                Main();
+            }, 5000);
+        }
+    }
+</script>
+</html>
