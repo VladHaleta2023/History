@@ -20,6 +20,13 @@ class Test {
     }
 }
 
+class Audio {
+    constructor(name, src) {
+        this.name = name;
+        this.src = src;
+    }
+}
+
 let link = "https://vladhaleta2023.github.io/History/";
 
 picturesBarok = [
@@ -108,32 +115,48 @@ music70 = [
     new ObjectTest("Vangelis", "Albedo 0.39", ["https://vladhaleta2023.github.io/History/pictures/music70/48.jpg"]),
 ];
 
+musicOswiecenie = [
+    new Audio("Do Elizy", "./audio/Oswiecenie/Beethoven/DLA ELIZY - Ludwig Van Beethoven.mp3"),
+    new Audio("Sonata Księżycowa", "./audio/Oswiecenie/Beethoven/Ludwig van Beethoven - Sonata Księżycowa.mp3"),
+    new Audio("Symfonia 5", "./audio/Oswiecenie/Beethoven/Ludwig Van Beethoven's 5th Symphony in C Minor (Full).mp3"),
+    new Audio("Symfonia 9", "./audio/Oswiecenie/Beethoven/Symphony No. 9 ~ Beethoven.mp3"),
+    new Audio("Mała nocna muzyka", "./audio/Oswiecenie/Mozart/A Little Night Music - Wolfgang Amadeus Mozart.mp3"),
+    new Audio("Don Giovanni", "./audio/Oswiecenie/Mozart/K. 527 Mozart Don Giovanni, Overture.mp3"),
+    new Audio("Requiem", "./audio/Oswiecenie/Mozart/Mozart - Requiem.mp3"),
+    new Audio("Wesele Figara", "./audio/Oswiecenie/Mozart/Mozart - The Marriage of Figaro (Wesele Figara) - Overture.mp3"),
+    // 8
+    new Audio("Heandel", "./audio/Oswiecenie/Handel_ Zadok the Priest _ The English Concert & Händelfestspielorchester Halle.mp3"),
+    new Audio("Haydn", "./audio/Oswiecenie/Haydn.mp3"),
+    new Audio("Toccata and Fugue in D Minor", "./audio/Oswiecenie/Toccata and Fugue in D Minor (Best Version Ever).mp3"),
+    new Audio("Cztery pory roku", "./audio/Oswiecenie/Vivaldi.mp3"), // 11
+]
+
 oswiecenie = [
     new ObjectTest("Bracia Montgolfier", "Balon"),
     new ObjectTest("Alessandro Volta", "Kondensator, bateria elektryczna"),
     new ObjectTest("Daniel Defoe", "Przypadki Robinsona Kruzoe"),
-    new ObjectTest("Ludwig van Beethoven", "V Symfonia, IX Symfonia, Sonata księżycowa, Do Elizy"),
+    new ObjectTest("Ludwig van Beethoven", "V Symfonia, IX Symfonia, Sonata księżycowa, Do Elizy", undefined, [musicOswiecenie[0], musicOswiecenie[1], musicOswiecenie[2], musicOswiecenie[3]]),
     new ObjectTest("James Cook", "Australia i Nowa Zelandia"),
     new ObjectTest("Isaac Newton", "Prawo powszechnego ciążenia"),
-    new ObjectTest("Johann Sebastian Bach", "Pasja według św. Mateusza, Koncerty brandenburskie, Toccata i fuga d-moll"),
+    new ObjectTest("Johann Sebastian Bach", "Pasja według św. Mateusza, Koncerty brandenburskie, Toccata i fuga d-moll", undefined, [musicOswiecenie[10]]),
     new ObjectTest("Antoni van Leeuwenhoek", "Mikroskop"),
     new ObjectTest("Denis Diderot", "Wielka Encyklopedia francuska, Kubuś Fatalista i jego pan"),
     new ObjectTest("Kartezjusz", "Rozprawa o metodzie (racjonalizm)"),
-    new ObjectTest("Wolfgang Amadeus Mozart", "Symfonia Jowiszowa, Requiem, Mała nocna muzyka, Wesele Figara, Don Giovanni, Czarodziejski flet"),
+    new ObjectTest("Wolfgang Amadeus Mozart", "Symfonia Jowiszowa, Requiem, Mała nocna muzyka, Wesele Figara, Don Giovanni, Czarodziejski flet", undefined, [musicOswiecenie[4], musicOswiecenie[5], musicOswiecenie[6], musicOswiecenie[7]]),
     new ObjectTest("Immanuel Kant", "Krytyka czystego rozumu"),
     new ObjectTest("James Watt", "Maszyna parowa"),
-    new ObjectTest("Georg Friedrich Heandel", "Pasja według Św. Jana, Mesjasz, Zadok the Priest"),
+    new ObjectTest("Georg Friedrich Heandel", "Pasja według Św. Jana, Mesjasz, Zadok the Priest", undefined, [musicOswiecenie[8]]),
     new ObjectTest("Karol Linneusz", "Klasyfikacja roślin i zwierząt według gatunków"),
     new ObjectTest("Anders Celsius", "Skala temperatur"),
     new ObjectTest("Jonathan Swift", "Podróże Guliwera"),
     new ObjectTest("Gottfried Wilhelm Leibniz", "Rachunek różniczkowy i całkowy"),
     new ObjectTest("Monteskiusz", "O duchu praw (koncepcja trójpodziału władzy)"),
-    new ObjectTest("Antonio Vivaldi", "Cztery pory roku"),
+    new ObjectTest("Antonio Vivaldi", "Cztery pory roku", undefined, [musicOswiecenie[11]]),
     new ObjectTest("Benjamin Franklin", "Piorunochron"),
     new ObjectTest("John Locke", "Koncepcja umowy społecznej"),
     new ObjectTest("Wolter", "Listy o Anglikach"),
     new ObjectTest("Daniel Gabriel Fahrenheit", "Termometr rtęciowy"),
-    new ObjectTest("Joseph Haydn", "Symfonie, msze, oratoria"),
+    new ObjectTest("Joseph Haydn", "Symfonie, msze, oratoria", undefined, [musicOswiecenie[9]]),
     new ObjectTest("Michaił Łomonosow", "Chemia fizyczna, prawo zachowania masy w reakcjach chemicznych"),
 ];
 
@@ -141,6 +164,7 @@ music80 = [
     new ObjectTest("AC DC", "Fly on the Wall", ["./pictures/music80/1.jpg"]),
     new ObjectTest("AC DC", "The Razors Edge", ["./pictures/music80/2.jpg"]),
     new ObjectTest("Accept", "Metal Heart", ["./pictures/music80/3.jpg"]),
+    new ObjectTest("Aerosmith", "Pump", ["./pictures/music80/27.jpg"]),
     new ObjectTest("Bauhaus", "The Skys Gone Out", ["./pictures/music80/4.jpg"]),
     new ObjectTest("Bob Marley and the Wailers", "Legend", ["./pictures/music80/5.jpg"]),
     new ObjectTest("Bruce Springsteen", "Born In The U.S.A.", ["./pictures/music80/6_1.jpg", "./pictures/music80/6_2.jpg"]),
@@ -160,11 +184,11 @@ music80 = [
     new ObjectTest("Jean-Michel Jarre", "Les Concerts en Chine", ["./pictures/music80/20.jpg"]),
     new ObjectTest("Kate Bush", "Hounds of Love", ["./pictures/music80/21_1.jpg", "./pictures/music80/21_2.jpg"]),
     new ObjectTest("Madonna", "Like a Virgin", ["./pictures/music80/22.jpg"]),
+    new ObjectTest("Marillion", "Misplaced Childhood", ["./pictures/music80/38.jpg"]),
     new ObjectTest("Metallica", "...And Justice for All", ["./pictures/music80/23.jpg"]),
     new ObjectTest("Metallica", "Master of Puppets", ["./pictures/music80/24.jpg"]),
     new ObjectTest("Michael Jackson", "Thriller", ["./pictures/music80/25_1.jpg", "./pictures/music80/25_3.jpg"]),
     new ObjectTest("Mike Oldfield", "Crises", ["./pictures/music80/26.jpg"]),
-    new ObjectTest("Mike Oldfield", "Five Miles Out", ["./pictures/music80/27.jpg"]),
     new ObjectTest("Peter Gabriel", "So", ["./pictures/music80/28.jpg"]),
     new ObjectTest("Peter Gabriel", "IV", ["./pictures/music80/29.jpg"]),
     new ObjectTest("Phil Collins", "Face Value", ["./pictures/music80/30.jpg"]),
@@ -175,7 +199,6 @@ music80 = [
     new ObjectTest("Prince The Revolution", "Purple Rain", ["./pictures/music80/35.jpg"]),
     new ObjectTest("Queen", "A Kind of Magic", ["./pictures/music80/36.jpg"]),
     new ObjectTest("Queen", "Miracle", ["./pictures/music80/37.jpg"]),
-    new ObjectTest("Sinead OConnor", "The Lion and the Cobra", ["./pictures/music80/38_1.jpg", "./pictures/music80/38_2.jpg"]),
     new ObjectTest("Sting", "The Dream of the Blue Turtles", ["./pictures/music80/39.jpg"]),
     new ObjectTest("The Alan Parsons Project", "Eye in the Sky", ["./pictures/music80/40.jpg"]),
     new ObjectTest("The Cure", "Disintegration", ["./pictures/music80/41_1.jpg", "./pictures/music80/41_2.jpg"]),
