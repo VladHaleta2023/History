@@ -345,7 +345,7 @@ function getHTMLVariants(variantsArray) {
     return innerHTML;
 }
 
-let buffer = [new Audio("", "")];
+let buffer = [];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
