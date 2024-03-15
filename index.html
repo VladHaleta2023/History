@@ -326,16 +326,11 @@
         }
     }
 
-    @media only screen and (max-width: 382px) {
-        .btnZamknij {
-            margin-bottom: 6px;
-        }
-    }
-
-    @media only screen and (max-width: 367.2px) {
-        .btnZamknij {
-            margin-right: 0px !important;
-            margin-bottom: 6px;
+    @media only screen and (max-width: 400px) {
+        .btnListHelper {
+            flex-direction: column !important;
+            margin-bottom: 12px !important;
+            justify-content: center !important;
         }
     }
 
@@ -368,12 +363,12 @@
             <div id="Helper" style="position: relative;">
                 <span style="color: red">Wersja programu 3.0 AUDIO</span>
                 <br>
-                <div style="width: 100%; display: flex; justify-content: end; flex-wrap: wrap;">
-                    <button onclick="exitHelper()" style="margin-right: 12px;" class="btnZamknij">
-                        Zamknij
-                    </button>
-                    <button onclick="closeHelper()">
+                <div class="btnListHelper" style="width: 100%; display: flex; flex-direction: row; justify-content: end; align-items: center;">
+                    <button onclick="closeHelper()" style="margin: 4px 6px;">
                         Zobaczyć zmiany
+                    </button>
+                    <button onclick="exitHelper()" style="margin: 4px 6px;">
+                        Zamknij
                     </button>
                 </div>
             </div>
