@@ -211,13 +211,119 @@ music80 = [
     new ObjectTest("Yes", "90125", ["./pictures/music80/48_1.jpg", "./pictures/music80/48_2.jpg"]),
 ];
 
+let armiaAintiarmia = [
+    new Audio("Bombadil w locie", "./audio/polishMusic80/Armia - Antiarmia/Bombadil w locie.mp4"),
+    new Audio("Hej szara wiara", "./audio/polishMusic80/Armia - Antiarmia/Hej szara wiara.mp4"),
+    new Audio("Intro 87", "./audio/polishMusic80/Armia - Antiarmia/Intro 87.mp4"),
+    new Audio("Nic już nie przeszkodzi", "./audio/polishMusic80/Armia - Antiarmia/Nic już nie przeszkodzi.mp4"),
+    new Audio("Niewidzialna armia", "./audio/polishMusic80/Armia - Antiarmia/Niewidzialna armia.mp4"),
+    new Audio("Nigdzie, teraz, tutaj", "./audio/polishMusic80/Armia - Antiarmia/Nigdzie, teraz, tutaj.mp4"),
+    new Audio("Obok historii", "./audio/polishMusic80/Armia - Antiarmia/Obok historii.mp4"),
+    new Audio("Siódmy", "./audio/polishMusic80/Armia - Antiarmia/Siódmy.mp4"),
+    new Audio("W niczyjej sprawie", "./audio/polishMusic80/Armia - Antiarmia/W niczyjej sprawie.mp4"),
+    new Audio("Wiatr wieje tam gdzie chce", "./audio/polishMusic80/Armia - Antiarmia/Wiatr wieje tam gdzie chce.mp4"),
+    new Audio("Wojny bez łez", "./audio/polishMusic80/Armia - Antiarmia/Wojny bez łez.mp4"),
+    new Audio("Wołanie o pomoc", "./audio/polishMusic80/Armia - Antiarmia/Wołanie o pomoc.mp4"),
+    new Audio("Sędziowie", "./audio/polishMusic80/Armia - Antiarmia/Sędziowie.mp4"),
+    new Audio("Zostaw to 87", "./audio/polishMusic80/Armia - Antiarmia/Zostaw to.mp4"),
+];
+
+let kombi = [
+    new Audio("Błękitny pejzaż", "./audio/polishMusic80/Kombi/Błękitny pejzaż.mp4"),
+    new Audio("Cyfrowa gra", "./audio/polishMusic80/Kombi/Cyfrowa gra.mp4"),
+    new Audio("Jej wspomnienie", "./audio/polishMusic80/Kombi/Jej wspomnienie.mp4"),
+    new Audio("Karty śmierci", "./audio/polishMusic80/Kombi/Karty śmierci.mp4"),
+    new Audio("Kochać Cię za późno", "./audio/polishMusic80/Kombi/Kochać Cię za późno.mp4"),
+    new Audio("Nie ma zysku", "./audio/polishMusic80/Kombi/Nie ma zysku.mp4"),
+    new Audio("Nie poddawaj się", "./audio/polishMusic80/Kombi/Nie poddawaj się.mp4"),
+    new Audio("Srebrny talizman", "./audio/polishMusic80/Kombi/Srebrny talizman.mp4"),
+    new Audio("Słodkiego miłego życia", "./audio/polishMusic80/Kombi/Słodkiego miłego życia.mp4"),
+]
+
+polishMusic80 = [
+    new ObjectTest("1984", "Radio niebieskie oczy Heleny", ["./pictures/polishMusic80/1.jpg"], [new Audio("Radio Niebieskie Oczy Heleny", "./audio/polishMusic80/1984 - Radio Niebieskie Oczy Heleny.mp4")]),
+    new ObjectTest("1984", "Specjalny rodzaj kontrastu", ["./pictures/polishMusic80/2.jpg"], [new Audio("Specjalny Rodzaj Kontrastu", "./audio/polishMusic80/1984 - Specjalny Rodzaj Kontrastu '86.mp4")]),
+    new ObjectTest("Armia", "Antiarmia", ["./pictures/polishMusic80/3.jpg"], [
+        armiaAintiarmia[0],
+        armiaAintiarmia[1],
+        armiaAintiarmia[2],
+        armiaAintiarmia[3],
+        armiaAintiarmia[4],
+        armiaAintiarmia[5],
+        armiaAintiarmia[6],
+        armiaAintiarmia[7],
+        armiaAintiarmia[8],
+        armiaAintiarmia[9],
+        armiaAintiarmia[10],
+        armiaAintiarmia[11],
+        armiaAintiarmia[12],
+        armiaAintiarmia[13],
+    ]),
+    new ObjectTest("Brygada Kryzys", "Czarną Brygada", ["./pictures/polishMusic80/4.jpg"], [new Audio("Brygada Kryzys - Centrala", "./audio/polishMusic80/Brygada Kryzys - Centrala.mp3")]),
+    new ObjectTest("Dezerter", "Kolaboracja", ["./pictures/polishMusic80/5_1.jpg", "./pictures/polishMusic80/5_2.jpg"], [new Audio("Dezerter - Kolaboracja (official audio)", "./audio/polishMusic80/Dezerter - Kolaboracja (official audio).mp4")]),
+    new ObjectTest("Dzieci Kapitana Klossa", "Ballada", ["./pictures/polishMusic80/6_1.jpg"], [new Audio("Dzieci Kapitana Klossa - Pieśń (Ballada) o Bohaterze", "./audio/polishMusic80/Dzieci Kapitana Klossa - Pieśń (Ballada) o Bohaterze.mp3")]),
+    new ObjectTest("Dżem", "Cegła", ["./pictures/polishMusic80/7.jpg"], [new Audio("Dżem - Czerwony jak Cegła", "./audio/polishMusic80/Dżem - Czerwony jak Cegła.mp4")]),
+    new ObjectTest("Klaus Mitffoch", "Ogniowe strzelby", ["./pictures/polishMusic80/8_1.jpg", "./pictures/polishMusic80/8_2.jpg"], [new Audio("Klaus Mitffoch - Ogniowe strzelby", "./audio/polishMusic80/Ogniowe strzelby.mp4")]),
+    new ObjectTest("Kobranocka", "Kwiaty na żywopłocie", ["./pictures/polishMusic80/9.jpg"], [new Audio("Kobranocka - Kwiaty na żywopłocie", "./audio/polishMusic80/Kobranocka - Kwiaty na żywopłocie.mp4")]),
+    new ObjectTest("Kombi", "Nowy Rozdział", ["./pictures/polishMusic80/10.jpg"], [
+        kombi[0],
+        kombi[1],
+        kombi[2],
+        kombi[3],
+        kombi[4],
+        kombi[5],
+        kombi[6],
+        kombi[7],
+        kombi[8],
+    ]), 
+    new ObjectTest("Kosmetyki Mrs Pinki", "KMP vol.1", ["./pictures/polishMusic80/11.jpg"], [new Audio("Kosmetyki Mrs. Pinki - Ciągle w ruchu", "./audio/polishMusic80/Kosmetyki Mrs. Pinki - Ciągle w ruchu.mp4")]),
+    new ObjectTest("KSU", "Pod prąd", ["./pictures/polishMusic80/12.jpg"], [new Audio("KSU - Pod Prąd", "./audio/polishMusic80/KSU - Pod Prąd (Pod Prąd).mp4")]),
+    new ObjectTest("Kult", "Posłuchaj to do ciebie", ["./pictures/polishMusic80/13.jpg"], [new Audio("KULT - Posłuchaj to do Ciebie", "./audio/polishMusic80/KULT - Posłuchaj to do Ciebie [OFFICIAL AUDIO].mp4")]),
+    new ObjectTest("Kult", "Spokojnie", ["./pictures/polishMusic80/14.jpg"], [new Audio("KULT - Spokojnie", "./audio/polishMusic80/KULT - Spokojnie [OFFICIAL AUDIO].mp4")]),
+    new ObjectTest("Lady Pank", "LP1", ["./pictures/polishMusic80/15.jpg"], [new Audio("Lady Pank - Lady Pank (Full Album)", "./audio/polishMusic80/Lady Pank - Lady Pank (Full Album).mp3")]),
+    new ObjectTest("Lady Pank", "Ohyda", ["./pictures/polishMusic80/16.jpg"], [new Audio("Lady Pank- A to Ohyda", "./audio/polishMusic80/Lady Pank- A to Ohyda HQ Audio.wmv.mp4")]),
+    new ObjectTest("Lech Janerka", "Historia podwodna", ["./pictures/polishMusic80/17.jpg"], [new Audio("Lech Janerka - Historia podwodna", "./audio/polishMusic80/Lech Janerka - Historia podwodna.mp4")]),
+    new ObjectTest("Lombard", "Śmierć dyskotece", ["./pictures/polishMusic80/18.jpg"], [new Audio("Lombard - Śmierć Dyskotece", "./audio/polishMusic80/Lombard - Śmierć Dyskotece.mp4")]),
+    new ObjectTest("Lombard", "Szara maść", ["./pictures/polishMusic80/19.jpg"], [new Audio("Lombard - Szara maść", "./audio/polishMusic80/Lombard - Szara maść.mp4")]),
+    new ObjectTest("Maanam", "Mental Cut", ["./pictures/polishMusic80/20.jpg"], [new Audio("Maanam - Mental Cat", "./audio/polishMusic80/Maanam - Mental Cat (film muzyczny Mental Cut).mp4")]),
+    new ObjectTest("Maanam", "Nocny patrol", ["./pictures/polishMusic80/21.jpg"], [new Audio("Maanam - Nocny Patrol", "./audio/polishMusic80/Maanam - 01. Nocny Patrol.mp4")]),
+    new ObjectTest("Maanam", "O!", ["./pictures/polishMusic80/22.jpg"], [new Audio("Maanam - O! Nie Rób Tyle Hałasu", "./audio/polishMusic80/Maanam - O! Nie Rób Tyle Hałasu [Official Music Video].mp4")]),
+    new ObjectTest("Madame", "Koncert", ["./pictures/polishMusic80/23.jpg"], [new Audio("Madame - Koncert", "./audio/polishMusic80/Madame-17_12_85 przeboje dwojki  Katowice-spodek.mp3")]),
+    new ObjectTest("Made In Poland", "Martwy kabaret", ["./pictures/polishMusic80/24.jpg"], [new Audio("MADE IN POLAND Martwy kabaret (Full album)", "./audio/polishMusic80/MADE IN POLAND Martwy kabaret (Full album).mp3")]),
+    new ObjectTest("Moskwa", "Nigdy!", ["./pictures/polishMusic80/25_1.jpg", "./pictures/polishMusic80/25_2.jpg"], [new Audio("Nigdy", "./audio/polishMusic80/Nigdy.mp4")]),
+    new ObjectTest("Obywatel G.C.", "Tak Tak!", ["./pictures/polishMusic80/26.jpg"], [new Audio("Obywatel G.C. - Tak tak... To ja..", "./audio/polishMusic80/Obywatel G.C. - Tak tak... To ja..mp4")]),
+    new ObjectTest("Obywatel G.C.", "Stan strachu", ["./pictures/polishMusic80/27.jpg"], [new Audio("Obywatel G.C. - Stan Strachu (1989) (Full Album)", "./audio/polishMusic80/Obywatel G.C. - Stan Strachu (1989) (Full Album).mp3")]),
+    new ObjectTest("Oddzial zamkniety", "OZ", ["./pictures/polishMusic80/28_1.jpg", "./pictures/polishMusic80/28_2.jpg"], [new Audio("Jary Oddział Zamknięty - Ten Wasz Świat (LIVE 2022)", "./audio/polishMusic80/Jary Oddział Zamknięty - Ten Wasz Świat (LIVE 2022).mp3")]),
+    new ObjectTest("One Million Bulgarians", "Pierwsza płyta", ["./pictures/polishMusic80/29.jpg"], [new Audio("One Million Bulgarians - Czerwone Krzaki", "./audio/polishMusic80/One Million Bulgarians - Czerwone Krzaki.mp4")]),
+    new ObjectTest("Perfect", "UNU", ["./pictures/polishMusic80/30.jpg"], [new Audio("Perfect - Objazdowe nieme kino", "./audio/polishMusic80/Perfect - Objazdowe nieme kino.mp4")]),
+    new ObjectTest("Perfect", "Live", ["./pictures/polishMusic80/31.jpg"], [new Audio("Perfekt - Niewiele Ci Mogę Dać", "./audio/polishMusic80/Niewiele Ci Mogę Dać.mp4")]),
+    new ObjectTest("Proletaryat", "Revolt", ["./pictures/polishMusic80/32.jpg"], [new Audio("Proletaryat - Naprzód Rodacy", "./audio/polishMusic80/Proletaryat - Naprzód Rodacy.mp4")]),
+    new ObjectTest("Republika", "Nowe sytuacje", ["./pictures/polishMusic80/33.jpg"], [new Audio("Nowe sytuacje", "./audio/polishMusic80/Nowe sytuacje.mp4")]),
+    new ObjectTest("Republika", "Nieustanne tango", ["./pictures/polishMusic80/34.jpg"], [new Audio("Nieustanne tango", "./audio/polishMusic80/Republika _Nieustanne tango.mp4")]),
+    new ObjectTest("Rezerwat", "Obserwator", ["./pictures/polishMusic80/35.jpg"], [new Audio("Rezerwat - Obserwator (1983)", "./audio/polishMusic80/Rezerwat - Obserwator - (1983).mp4")]),
+    new ObjectTest("Róże Europy", "Stańskie przed Lustrami", ["./pictures/polishMusic80/36_1.jpg", "./pictures/polishMusic80/36_2.jpg"], [new Audio("Róże Europy - Stańcie Przed Lustrami", "./audio/polishMusic80/Róże Europy - Stańcie Przed Lustrami.mp4")]),
+    new ObjectTest("Shakin' Dudi", "Złota płyty", ["./pictures/polishMusic80/37.jpg"], [new Audio("Shakin'Dudi -  Au sza la la la", "./audio/polishMusic80/Shakin'Dudi -  Au sza la la la.mp4")]),
+    new ObjectTest("Siekiera", "Nowa Aleksandria", ["./pictures/polishMusic80/38.jpg"], [new Audio("Siekiera - Nowa Aleksandria", "./audio/polishMusic80/Siekiera - Nowa Aleksandria.mp4")]),
+    new ObjectTest("Sztywny Pal Azji", "Europa i Azja", ["./pictures/polishMusic80/39.jpg"], [new Audio("Sztywny Pal Azji - Europa i Azja (LIVE)", "./audio/polishMusic80/Sztywny Pal Azji - Europa i Azja [LIVE].mp3")]),
+    new ObjectTest("T Love", "Wychowanie", ["./pictures/polishMusic80/40.jpg"], [new Audio("T.Love - To Wychowanie", "./audio/polishMusic80/T.Love - To Wychowanie [Official Music Video].mp4")]),
+    new ObjectTest("Tilt", "Czad Kommando", ["./pictures/polishMusic80/41.jpg"], [new Audio("Tilt - Czad czad czad", "./audio/polishMusic80/Czad czad czad.mp4")]),
+    new ObjectTest("Tilt", "Mówię ci, że...", ["./pictures/polishMusic80/42.jpg"], [new Audio("Tilt - Mówię Ci, że", "./audio/polishMusic80/Tilt - Mówię Ci, że.mp4")]),
+    new ObjectTest("TSA", "Heavy Metal Świat", ["./pictures/polishMusic80/43.jpg"], [new Audio("TSA - Heavy Metal Świat", "./audio/polishMusic80/Heavy Metal World.mp4")]),
+    new ObjectTest("TSA", "Live", ["./pictures/polishMusic80/44.jpg"], [new Audio("TSA Dream Team - Bejbe", "./audio/polishMusic80/TSA Dream Team - Bejbe (Official Video).mp4")]),
+    new ObjectTest("Turbo", "Dorosłe dzieci", ["./pictures/polishMusic80/45.jpg"], [new Audio("Dorosłe dzieci", "./audio/polishMusic80/Dorosłe dzieci.mp4")]),
+    new ObjectTest("Turbo", "Kawaleria Szatana", ["./pictures/polishMusic80/46.jpg"], [new Audio("Kawaleria szatana", "./audio/polishMusic80/Kawaleria szatana.mp4")]),
+    new ObjectTest("Variete", "Bydgoszcz", ["./pictures/polishMusic80/47.jpg"], [new Audio("Variété - Bydgoszcz", "./audio/polishMusic80/Variété - Bydgoszcz.mp4")]),
+    new ObjectTest("Voo Voo", "Wizyta", ["./pictures/polishMusic80/48.jpg"], [new Audio("Voo Voo - Wizyta I", "./audio/polishMusic80/1. Voo Voo - Wizyta I.mp4")]),
+];
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
 let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
+let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
 
 function getVariantsAuthor(data) {
-    result = [];
+    result = [new Audio("", "")];
     for (let i = 0; i < data.length; i++)
         result.push(data[i].autor);
     result.sort();
@@ -225,7 +331,7 @@ function getVariantsAuthor(data) {
 }
 
 function getVariantsName(data) {
-    result = [];
+    result = [new Audio("", "")];
     for (let i = 0; i < data.length; i++)
         result.push(data[i].name);
     result.sort();
@@ -239,7 +345,7 @@ function getHTMLVariants(variantsArray) {
     return innerHTML;
 }
 
-let buffer = [];
+let buffer = [new Audio("", "")];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -264,6 +370,8 @@ function getTest(dataSelected) {
             return testOswiecenie;
         case "Muzyka lat 80":
             return testMusic80;
+        case "Polska muzyka lat 80":
+            return testPolishMusic80;
         default:
             return testPicturesBarok;
     }
