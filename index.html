@@ -366,7 +366,7 @@
         position: absolute;
         width: 100%;">
             <div id="Helper" style="position: relative;">
-                <span style="color: red">Wersja programu 2.0</span>
+                <span style="color: red">Wersja programu 3.0 AUDIO</span>
                 <br>
                 <div style="width: 100%; display: flex; justify-content: end; flex-wrap: wrap;">
                     <button onclick="exitHelper()" style="margin-right: 12px;" class="btnZamknij">
@@ -481,21 +481,25 @@
         </main>
     </div>
     <div id="HelperBody" style="display: none;">
-        <h1 style="text-align: center; color: red">Wersja programu 2.0</h1>
+        <h1 style="text-align: center; color: red">Wersja programu 3.0 AUDIO</h1>
         <br>
-        <div id="textHelper">
-            Dodał się nowy przycisk <span style="font-weight: bold; margin-left: 6px;">Select</span>, który umożliwia zmiany trybu testu!
-        </div>
-        <br>
-        <div id="textHelper">
-            Proszę nacisnąć na przycisk <span style="font-weight: bold; margin: 0px 6px;">Select</span> i zobaczyć co się zmieni)
-        </div>
-        <div style="display: flex; justify-content: center;">
-            <button type="button" class="btn" id="VariantHelper" onclick="changeVariantHelper()"><span class="glyphicon glyphicon-cog" style="margin-right: 6px;"></span><span id="text">Select</span></button>
-        </div>
-        <br>
-        <div id="textHelper">
-            Widzimy że tekst przycisku się zmnienia. Z trybu select do trybu input.
+        <div style="width: calc(100vw-40px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+            <div id="textHelper">
+                <span style="color: cornflowerblue;">Funkcja Audio:</span>
+            </div>
+            <div id="textHelper">
+                Umożliwia przesłuchania muzyki tego autora
+            </div>
+            <div class="dropdown" id="AudioData" style="margin: 5px 0px; margin-right: 12px;">
+                <button class="btn dropdown-toggle inputBtn" type="button" id="menuDataAudio" data-toggle="dropdown">Wybór
+                <span class="caret" style="margin-left: 6px;"></span></button>
+                <ul class="dropdown-menu" id="audioList" style="width: 100px !important;">
+                    <li style="font-size: 24px; color: black; cursor: pointer;">ABBA</li>
+                </ul>
+            </div>
+            <audio controls id="audioSrc" style="width: 80vw !important;">
+                <source src="./audio/music70/10.mp4" type="type/mpeg">
+            </audio>
         </div>
         <br>
         <div id="textHelper">
@@ -568,25 +572,6 @@
             <img src="./pictures/picturesBarok/20.jpg" alt="image">
         </div>
         <br>
-        <br>
-        <div style="width: calc(100vw-40px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
-            <div id="textHelper">
-                <span style="color: cornflowerblue;">Funkcja Audio:</span>
-            </div>
-            <div id="textHelper">
-                Umożliwia przesłuchania muzyki tego autora
-            </div>
-            <div class="dropdown" id="AudioData" style="margin: 5px 0px; margin-right: 12px;">
-                <button class="btn dropdown-toggle inputBtn" type="button" id="menuDataAudio" data-toggle="dropdown">Wybór
-                <span class="caret" style="margin-left: 6px;"></span></button>
-                <ul class="dropdown-menu" id="audioList" style="width: 100px !important;">
-                    <li style="font-size: 24px; color: black; cursor: pointer;">ABBA</li>
-                </ul>
-            </div>
-            <audio controls id="audioSrc" style="width: 80vw !important;">
-                <source src="./audio/music70/10.mp4" type="type/mpeg">
-            </audio>
-        </div>
         <br>
         <div style="display: flex; justify-content: center; width: calc(100vw-40px);">
             <button onclick="exitHelper()" style="background-color: red; color: white; font-size: 24px; border: 0px; padding: 4px 18px;">Wróć</button>
