@@ -323,7 +323,7 @@ let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
 let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
 
 function getVariantsAuthor(data) {
-    result = [new Audio("", "")];
+    result = [];
     for (let i = 0; i < data.length; i++)
         result.push(data[i].autor);
     result.sort();
@@ -331,7 +331,7 @@ function getVariantsAuthor(data) {
 }
 
 function getVariantsName(data) {
-    result = [new Audio("", "")];
+    result = [];
     for (let i = 0; i < data.length; i++)
         result.push(data[i].name);
     result.sort();
