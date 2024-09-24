@@ -360,27 +360,30 @@
         align-items: center;
         position: absolute;
         width: 100%;">
-            <div id="Helper" style="position: relative;">
-                <span style="color: red">Wersja programu 3.0 AUDIO</span>
-                <br>
-                <div class="btnListHelper" style="width: 100%; display: flex; flex-direction: row; justify-content: end; align-items: center;">
-                    <button onclick="closeHelper()" style="margin: 4px 6px;">
-                        Zobaczyć zmiany
-                    </button>
-                    <button onclick="exitHelper()" style="margin: 4px 6px;">
-                        Zamknij
-                    </button>
+            <!--
+                <div id="Helper" style="position: relative;">
+                    <span style="color: red">Wersja programu 3.0 AUDIO</span>
+                    <br>
+                    <div class="btnListHelper" style="width: 100%; display: flex; flex-direction: row; justify-content: end; align-items: center;">
+                        <button onclick="closeHelper()" style="margin: 4px 6px;">
+                            Zobaczyć zmiany
+                        </button>
+                        <button onclick="exitHelper()" style="margin: 4px 6px;">
+                            Zamknij
+                        </button>
+                    </div>
                 </div>
-            </div>
+            -->
         </div>
         <header>
             <div class="menuFrontend">
                 <div class="selectMenu" id="selectMenuData">
                     <span class="textMenu">Test:</span>
                     <div class="dropdown" id="Data">
-                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Malarstwo Baroku
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Muzyka lat 90
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
+                            <li><a href="#">Muzyka lat 90</a></li>
                             <li><a href="#">Malarstwo Baroku</a></li>
                             <li><a href="#">Muzyka lat 70</a></li>
                             <li><a href="#">Oświecenie</a></li>
@@ -576,7 +579,7 @@
 </body>
 <script src="index.js"></script>
 <script>
-    var menu = "Tylko Nazwę", autor = "Agnolo Bronzino", name = "Alegoria z Wenus i Kupidynem", img="/pictures/1.jpg", dataSelected = "Malarstwo Baroku", data = testPicturesBarok.data;
+    var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Muzyka lat 90", data = testPicturesBarok.data;
     let selectedTest = testPicturesBarok, variant = "select", selectedMenuList = "Tylko Nazwę", dataIndex = undefined;
 
     // Audio

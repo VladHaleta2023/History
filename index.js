@@ -211,6 +211,87 @@ music80 = [
     new ObjectTest("Yes", "90125", ["./pictures/music80/48_1.jpg", "./pictures/music80/48_2.jpg"]),
 ];
 
+music90 = [
+    new ObjectTest("2Pac", "All Eyez On Me", ["./pictures/music90/1.jpg"], [new Audio("2Pac - All Eyez On Me", "./audio/music90/2Pac - All Eyez On Me.mp3")]),
+    new ObjectTest("Alice in Chains", "Dirt", ["./pictures/music90/2.jpg"], undefined),
+    new ObjectTest("Alice in Chains", "Jar Of Flies", ["./pictures/music90/3.jpg"], undefined),
+    new ObjectTest("Apollo 440", "Electro Glide In Blue", ["./pictures/music90/4.jpg"], undefined),
+    new ObjectTest("Beastie Boys", "Ill Communication", ["./pictures/music90/5.jpg"], undefined),
+    new ObjectTest("Björk", "Homogenic", ["./pictures/music90/6.jpg"], undefined),
+    new ObjectTest("Björk", "Post", ["./pictures/music90/7.jpg"], undefined),
+    new ObjectTest("Cypress Hil", "Black Sunday", ["./pictures/music90/8.jpg"], undefined),
+    new ObjectTest("Depeche Mode", "Violator", ["./pictures/music90/9.jpg"], undefined),
+
+    new ObjectTest("Eminem", "The Slim Shady", ["./pictures/music90/10.jpg"], undefined),
+
+    new ObjectTest("Faith No More", "Angel Dust", ["./pictures/music90/11.jpg"], undefined),
+    new ObjectTest("Fatboy Slim", "Youve Come a Long Way, Baby", ["./pictures/music90/12.jpg"], undefined),
+    new ObjectTest("Fugees", "The Score", ["./pictures/music90/13.jpg"], undefined),
+    new ObjectTest("Guns N Roses", "Use Your Illusion I", ["./pictures/music90/14.jpg"], undefined),
+    new ObjectTest("Guns N Roses", "Use Your Illusion II", ["./pictures/music90/15.jpg"], undefined),
+    new ObjectTest("Hole", "Live Through This", ["./pictures/music90/16.jpg"], undefined),
+    new ObjectTest("House of Pain", "House of Pain", ["./pictures/music90/17.jpg"], undefined),
+    new ObjectTest("Jamiroquai", "Emergency on Planet Earth", ["./pictures/music90/18.jpg"], undefined),
+    new ObjectTest("Jane's Addiction", "Ritual de lo Habitual", ["./pictures/music90/19.jpg"], undefined),
+    new ObjectTest("Korn", "Follow the Leader", ["./pictures/music90/20.jpg"], undefined),
+    new ObjectTest("Korn", "Issues", ["./pictures/music90/21.jpg"], undefined),
+
+    new ObjectTest("Live", "Throwing Copper", ["./pictures/music90/22.jpg"], undefined),
+    new ObjectTest("Mad Season", "Above", ["./pictures/music90/23.jpg"], undefined),
+    new ObjectTest("Madonna", "Ray of Light", ["./pictures/music90/24.jpg"], undefined),
+    new ObjectTest("Marilyn Manson", "Antichrist Superstar", ["./pictures/music90/25.jpg"], undefined),
+    new ObjectTest("Massive Attack", "Mezzanine", ["./pictures/music90/26.jpg"], undefined),
+
+    new ObjectTest("Metallica", "Black Album", ["./pictures/music90/27.jpg"], undefined),
+    new ObjectTest("Michael Jackson", "Dangerous", ["./pictures/music90/28.jpg"], undefined),
+
+    new ObjectTest("Moby", "Play", ["./pictures/music90/29.jpg"], undefined),
+    new ObjectTest("Nick Cave & The Bad Seeds", "Murder Ballads", ["./pictures/music90/30.jpg"], undefined),
+
+    new ObjectTest("Nine inch nails", "The Downward Spiral", ["./pictures/music90/31.jpg"], undefined),
+
+    new ObjectTest("Nirvana", "In Utero", ["./pictures/music90/32.jpg"], undefined),
+    new ObjectTest("Nirvana", "Nevermind", ["./pictures/music90/33.jpg"], undefined),
+
+    new ObjectTest("Oasis", "(What's the Story) Morning Glory", ["./pictures/music90/34.jpg"], undefined),
+    new ObjectTest("Pearl Jam", "Ten", ["./pictures/music90/35.jpg"], undefined),
+    new ObjectTest("Pearl Jam", "Vs", ["./pictures/music90/36.jpg"], undefined),
+    new ObjectTest("Placebo", "Without You I'm Nothing", ["./pictures/music90/37.jpg"], undefined),
+    new ObjectTest("Portishead", "Dummy", ["./pictures/music90/38.jpg"], undefined),
+    new ObjectTest("Queen", "Innuendo", ["./pictures/music90/39.jpg"], undefined),
+    new ObjectTest("R.E.M.", "Automatic for the People", ["./pictures/music90/40.jpg"], undefined),
+    new ObjectTest("R.E.M.", "Out of Time", ["./pictures/music90/41.jpg"], undefined),
+
+    new ObjectTest("Radiohead", "OK Computer", ["./pictures/music90/42.jpg"], undefined),
+    new ObjectTest("Radiohead", "The Bends", ["./pictures/music90/43.jpg"], undefined),
+
+    new ObjectTest("Rage Against the Machine", "Killing In The Name", ["./pictures/music90/44_1.jpg", "./pictures/music90/44_2.jpg"], undefined),
+    new ObjectTest("Rage Against the Machine", "The Battle of Los Angeles", ["./pictures/music90/45.jpg"], undefined),
+    
+    new ObjectTest("Rammstein", "Sehnsucht", ["./pictures/music90/46.jpg"], undefined),
+    
+    new ObjectTest("Red Hot Chili Peppers", "Californication", ["./pictures/music90/47.jpg"], undefined),
+    new ObjectTest("Red Hot Chili Peppers", "Blood Sugar Sex Magik", ["./pictures/music90/48.jpg"], undefined),
+    new ObjectTest("Santana", "Supernatural", ["./pictures/music90/49.jpg"], undefined),
+    new ObjectTest("Silverchair", "Frogstomp", ["./pictures/music90/50.jpg"], undefined),
+    new ObjectTest("Sinead O'Connor", "I Do Not Want What I Havent Got", ["./pictures/music90/51.jpg"], undefined),
+    new ObjectTest("Soundgarden", "Superunknown", ["./pictures/music90/52_1.jpg", "./pictures/music90/52_2.jpg"], undefined),
+    new ObjectTest("Stone temple Pilots", "Core", ["./pictures/music90/53.jpg"], undefined),
+    new ObjectTest("The Black Crowes", "The Southern Harmony And Musical Companion", ["./pictures/music90/54.jpg"], undefined),
+    new ObjectTest("The Chemical Brothers", "Surrender", ["./pictures/music90/55.jpg"], undefined),
+    new ObjectTest("The Cranberries", "No Need to Argue", ["./pictures/music90/56.jpg"], undefined),
+    new ObjectTest("The Cure", "Wish", ["./pictures/music90/57.jpg"], undefined),
+    new ObjectTest("The Offspring", "Americana", ["./pictures/music90/58.jpg"], undefined),
+
+    new ObjectTest("The Prodigy", "The Fat of the Land", ["./pictures/music90/59.jpg"], undefined),
+
+    new ObjectTest("The Rolling Stones", "Bridges To Babylon", ["./pictures/music90/60.jpg"], undefined),
+    new ObjectTest("The Smashing Pumpkins", "Mellon Collie And The Infinite Sadness", ["./pictures/music90/61.jpg"], undefined),
+    new ObjectTest("Tool", "Lateralus", ["./pictures/music90/62.jpg"], undefined),
+    new ObjectTest("U2", "Achtung Baby", ["./pictures/music90/63.jpg"], undefined),
+    new ObjectTest("U2", "Zooropa", ["./pictures/music90/64.jpg"], undefined),
+];
+
 let armiaAintiarmia = [
     new Audio("Bombadil w locie", "./audio/polishMusic80/Armia - Antiarmia/Bombadil w locie.mp4"),
     new Audio("Hej szara wiara", "./audio/polishMusic80/Armia - Antiarmia/Hej szara wiara.mp4"),
@@ -321,6 +402,7 @@ let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
 let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
 let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
+let testMusic90 = new Test(music90, "Autor Muzyki", "Nazwa Muzyki");
 
 function getVariantsAuthor(data) {
     result = [];
@@ -372,6 +454,8 @@ function getTest(dataSelected) {
             return testMusic80;
         case "Polska muzyka lat 80":
             return testPolishMusic80;
+        case "Muzyka lat 90":
+            return testMusic90;
         default:
             return testPicturesBarok;
     }
