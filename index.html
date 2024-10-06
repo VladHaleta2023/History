@@ -980,6 +980,7 @@
         if (menu == "Tylko Nazwę") {
             autor = document.querySelector("div.dropdown#autor>div#selectAutor>button>span#text").innerHTML;
             name = document.querySelector("span.correctAnswer#name").innerHTML;
+
             if (autor == element['autor']) {
                 document.querySelector("div.showResult").style.display = "flex";
                 document.querySelector("div.showResult>div").innerHTML = "Correct!";

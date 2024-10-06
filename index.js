@@ -277,7 +277,7 @@ music90 = [
     new ObjectTest("Metallica", "Black Album", ["./pictures/music90/27.jpg"], metallicaBlackAlbum),
     new ObjectTest("Michael Jackson", "Dangerous", ["./pictures/music90/28.jpg"], undefined),
     new ObjectTest("Moby", "Play", ["./pictures/music90/29.jpg"], undefined),
-    new ObjectTest("Nick Cave & The Bad Seeds", "Murder Ballads", ["./pictures/music90/30.jpg"], undefined),
+    new ObjectTest("Nick Cave And The Bad Seeds", "Murder Ballads", ["./pictures/music90/30.jpg"], undefined),
     new ObjectTest("Nine inch nails", "The Downward Spiral", ["./pictures/music90/31.jpg"], undefined),
     new ObjectTest("Nirvana", "In Utero", ["./pictures/music90/32.jpg"], nirvana),
     new ObjectTest("Nirvana", "Nevermind", ["./pictures/music90/33.jpg"], nirvana),
