@@ -299,7 +299,7 @@ music90 = [
     new ObjectTest("Santana", "Supernatural", ["./pictures/music90/49.jpg"], undefined),
     new ObjectTest("Silverchair", "Frogstomp", ["./pictures/music90/50.jpg"], undefined),
     new ObjectTest("Sinead O'Connor", "I Do Not Want What I Havent Got", ["./pictures/music90/51.jpg"], undefined),
-    new ObjectTest("Soundgarden", "Superunknown", ["./pictures/music90/52_1.jpg", "./pictures/music90/52_2.jpg"], undefined),
+    new ObjectTest("Soundgarden", "Superunknown", ["./pictures/music90/52_1.jpg"], undefined),
     new ObjectTest("Stone temple Pilots", "Core", ["./pictures/music90/53.jpg"], undefined),
     new ObjectTest("The Black Crowes", "The Southern Harmony And Musical Companion", ["./pictures/music90/54.jpg"], undefined),
     new ObjectTest("The Chemical Brothers", "Surrender", ["./pictures/music90/55.jpg"], undefined),
