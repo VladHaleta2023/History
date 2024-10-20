@@ -152,6 +152,14 @@
         padding: 0px !important;
     }
 
+    .dropdown-menu>li {
+        word-break: break-word;
+    }
+
+    .dropdown-menu>li>a {
+        white-space: unset;
+    }
+
     .inputBtn {
         background-color: rgb(88, 175, 251);
         color: white !important;
@@ -360,29 +368,28 @@
         align-items: center;
         position: absolute;
         width: 100%;">
-            <!--
-                <div id="Helper" style="position: relative;">
-                    <span style="color: red">Wersja programu 3.0 AUDIO</span>
-                    <br>
-                    <div class="btnListHelper" style="width: 100%; display: flex; flex-direction: row; justify-content: end; align-items: center;">
-                        <button onclick="closeHelper()" style="margin: 4px 6px;">
-                            Zobaczyć zmiany
-                        </button>
-                        <button onclick="exitHelper()" style="margin: 4px 6px;">
-                            Zamknij
-                        </button>
-                    </div>
+            <div id="Helper" style="position: relative; text-align: center;">
+                <span style="color:blueviolet">Wersja programu 4.0</span>
+                <br>
+                <div class="btnListHelper" style="width: 100%; display: flex; flex-direction: row; justify-content: end; align-items: center;">
+                    <button onclick="closeHelper()" style="margin: 4px 6px;">
+                        Zobaczyć zmiany
+                    </button>
+                    <button onclick="exitHelper()" style="margin: 4px 6px;">
+                        Zamknij
+                    </button>
                 </div>
-            -->
+            </div>
         </div>
         <header>
             <div class="menuFrontend">
                 <div class="selectMenu" id="selectMenuData">
                     <span class="textMenu">Test:</span>
                     <div class="dropdown" id="Data">
-                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Muzyka lat 90
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Odkrywcy i Wynalazcy Klasa 3
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
+                            <li><a href="#">Odkrywcy i Wynalazcy Klasa 3</a></li>
                             <li><a href="#">Muzyka lat 90</a></li>
                             <li><a href="#">Malarstwo Baroku</a></li>
                             <li><a href="#">Muzyka lat 70</a></li>
@@ -409,7 +416,10 @@
                 <button onclick="Next()" type="button" class="btn" id="Dalej">Dalej</button>
             </div>
             <div class="menuFrontend">
-                <button type="button" class="btn" id="Variant" onclick="changeVariant()"><span class="glyphicon glyphicon-cog" style="margin-right: 6px;"></span><span id="text">Select</span></button>
+                <button type="button" class="btn" id="Variant" onclick="changeVariant()">
+                    <span class="glyphicon glyphicon-cog" style="margin-right: 2px;"></span>
+                    <span id="text">Select</span>
+                </button>
                 <button type="button" class="btn" id="Generuj">
                     <a href="./table.html" target="_self" style="text-decoration: none; color: white;"><span class="glyphicon glyphicon-th"></span> Pokaż tabelę</a>
                 </button>
@@ -479,8 +489,9 @@
         </main>
     </div>
     <div id="HelperBody" style="display: none;">
-        <h1 style="text-align: center; color: red">Wersja programu 3.0 AUDIO</h1>
+        <h1 style="text-align: center; color:blueviolet">Wersja programu 4.0</h1>
         <br>
+        <!--
         <div style="width: calc(100vw-40px); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
             <div id="textHelper">
                 <span style="color: cornflowerblue;">Funkcja Audio:</span>
@@ -500,6 +511,7 @@
             </audio>
         </div>
         <br>
+        -->
         <div id="textHelper">
             <span style="color: cornflowerblue;">Tryb Select:</span>
         </div>
@@ -552,6 +564,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
             <br>
             <div id="textHelper">
@@ -569,6 +582,7 @@
             <br>
             <img src="./pictures/picturesBarok/20.jpg" alt="image">
         </div>
+        -->
         <br>
         <br>
         <div style="display: flex; justify-content: center; width: calc(100vw-40px);">
@@ -579,8 +593,8 @@
 </body>
 <script src="index.js"></script>
 <script>
-    var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Muzyka lat 90", data = testPicturesBarok.data;
-    let selectedTest = testPicturesBarok, variant = "select", selectedMenuList = "Tylko Nazwę", dataIndex = undefined;
+    var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Odkrywcy i Wynalazcy Klasa 3", data = testPicturesBarok.data;
+    let selectedTest = testPicturesBarok, variant = "input", selectedMenuList = "Tylko Nazwę", dataIndex = undefined;
 
     // Audio
     function selectAudio(audio) {
@@ -655,7 +669,27 @@
     }
 
     // Helper
-    
+
+    function setVariant(variant) {
+        let btnVariant = document.getElementById("Variant");
+        if (variant == "select") {
+            variant = "select";
+            btnVariant.querySelector("span#text").innerHTML = "Select";
+            document.getElementById("selectAutor").style.display = "block";
+            document.getElementById("selectName").style.display = "block";
+            document.getElementById("inputAutor").style.display = "none";
+            document.getElementById("inputName").style.display = "none";
+        }
+        else {
+            variant = "input";
+            btnVariant.querySelector("span#text").innerHTML = "Input";
+            document.getElementById("selectAutor").style.display = "none";
+            document.getElementById("selectName").style.display = "none";
+            document.getElementById("inputAutor").style.display = "block";
+            document.getElementById("inputName").style.display = "block";
+        }
+    }
+
     function changeVariant() {
         let btnVariant = document.getElementById("Variant");
         if (btnVariant.querySelector("span#text").innerHTML == "Select") {
@@ -898,6 +932,15 @@
         let textName = document.querySelector("span.correctAnswer#name");
         let audioList = document.querySelector("ul#audioList");
 
+        if (dataSelected == "Oświecenie" || dataSelected == "Odkrywcy i Wynalazcy Klasa 3") {
+            setVariant("select");
+            changeVariant();
+        }
+        else {
+            setVariant("input");
+            changeVariant();
+        }
+
         if (changeTest) {
             buffer = [];
             results = [];
@@ -918,7 +961,6 @@
             results = [];
         }
 
-        console.log(buffer);
         h1.innerHTML = String(buffer.length + 1) + "/" + String(data.length);
 
         setVariants(data);

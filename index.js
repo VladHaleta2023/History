@@ -419,12 +419,41 @@ polishMusic80 = [
     new ObjectTest("Voo Voo", "Wizyta", ["./pictures/polishMusic80/48.jpg"], [new Audio("Voo Voo - Wizyta I", "./audio/polishMusic80/1. Voo Voo - Wizyta I.mp4")]),
 ];
 
+odkrWynKl3 = [
+    new ObjectTest("Albert Einstein", "Teoria względności", undefined, undefined),
+    new ObjectTest("Alfred Nobel", "Dynamit", undefined, undefined),
+    new ObjectTest("Alexander Graham Bell", "Telefon", undefined, undefined),
+    new ObjectTest("Auguste i Louis Lumiere", "Kinematograf", undefined, undefined),
+    new ObjectTest("Carl Benz i Gottlieb Daimler", "Silnik spalinowy", undefined, undefined),
+    new ObjectTest("Dmitrij Mendelejew", "Układ okresowy pierwiastków", undefined, undefined),
+    new ObjectTest("Ferdynand Zeppelin", "Sterowce", undefined, undefined),
+    new ObjectTest("Gregor Mendel", "Zmienność i dziedziczność organizmów", undefined, undefined),
+    new ObjectTest("Guglielmo Marconi", "Radio", undefined, undefined),
+    new ObjectTest("Henry Ford", "Pierwsza taśma produkcyjna", undefined, undefined),
+    new ObjectTest("Ignacy Łukasiewicz", "Lampa naftowa", undefined, undefined),
+    new ObjectTest("Iwan Pawłow", "Fizjologia i odruchy warunkowe", undefined, undefined),
+    new ObjectTest("Jean Bernard Foucalt", "Pomiar prędkości światła", undefined, undefined),
+    new ObjectTest("James Maxwell", "Teoria elektromagnetyzmu", undefined, undefined),
+    new ObjectTest("Karol Olszewski i Zygmunt wróblewski", "Skroplenie tlenu i azotu (elektroliza)", undefined, undefined),
+    new ObjectTest("Louis Pasteur", "Szczepionka przeciw wściekliźnie", undefined, undefined),
+    new ObjectTest("Maria Skłodowska-Curie", "Pierwiastki radioaktywne Polon i Rad", undefined, undefined),
+    new ObjectTest("Max Planck", "Teoria kwantów", undefined, undefined),
+    new ObjectTest("Nikola Tesla", "Silnik elektryczny", undefined, undefined),
+    new ObjectTest("Orville i Wilbur Wright", "Samolot", undefined, undefined),
+    new ObjectTest("Robert Koch", "Szczepionka przeciw gruźlicy", undefined, undefined),
+    new ObjectTest("Rudolf Diesel", "Wysokoprężny silnik spalinowy", undefined, undefined),
+    new ObjectTest("Thomas Alva Edison", "Fonograf i żarówka", undefined, undefined),
+    new ObjectTest("Wilhelm Roentgen", "Promienie X", undefined, undefined),
+    new ObjectTest("Zygmunt Freud", "Psychoanaliza", undefined, undefined),
+];
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
 let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
 let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
 let testMusic90 = new Test(music90, "Autor Muzyki", "Nazwa Muzyki");
+let testOdkrWynKl3 = new Test(odkrWynKl3, "Autor Odkrycia", "Nazwa Odkrycia")
 
 function getVariantsAuthor(data) {
     result = [];
@@ -478,6 +507,8 @@ function getTest(dataSelected) {
             return testPolishMusic80;
         case "Muzyka lat 90":
             return testMusic90;
+        case "Odkrywcy i Wynalazcy Klasa 3":
+            return testOdkrWynKl3
         default:
             return testPicturesBarok;
     }
