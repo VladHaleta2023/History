@@ -594,7 +594,7 @@
 <script src="index.js"></script>
 <script>
     var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Odkrywcy i Wynalazcy Klasa 3", data = testPicturesBarok.data;
-    let selectedTest = testPicturesBarok, variant = "input", selectedMenuList = "Tylko Nazwę", dataIndex = undefined;
+    let selectedTest = testPicturesBarok, variant = "input", selectedMenuList = "Tylko Nazwę", dataIndex = undefined, onLoad = true;
 
     // Audio
     function selectAudio(audio) {
@@ -932,19 +932,18 @@
         let textName = document.querySelector("span.correctAnswer#name");
         let audioList = document.querySelector("ul#audioList");
 
-        if (dataSelected == "Oświecenie" || dataSelected == "Odkrywcy i Wynalazcy Klasa 3") {
-            setVariant("select");
-            changeVariant();
-        }
-        else {
-            setVariant("input");
-            changeVariant();
-        }
-
         if (changeTest) {
             buffer = [];
             results = [];
+            if ((dataSelected == "Odkrywcy i Wynalazcy Klasa 3" || dataSelected == "Oświecenie") && variant == "select") {
+                changeVariant();
+            }
+            if ((dataSelected != "Odkrywcy i Wynalazcy Klasa 3" && dataSelected != "Oświecenie") && variant == "input") {
+                changeVariant();
+            }
         }
+
+        setVariant(variant);
 
         selectedTest = getTest(dataSelected);
         data = selectedTest.data, firstLabel.innerHTML = selectedTest.firstLabel, secondLabel.innerHTML = selectedTest.secondLabel;
@@ -1000,6 +999,8 @@
         document.querySelector("div#selectMenuData").style.display = "none";
         document.querySelector("div#selectMenuKnow").style.display = "none";
         document.getElementById("myInputAutor").value = document.getElementById("myInputName").value = "";
+
+        console.log(variant);
 
         if (variant == "input") {
             if (selectedMenuList == "Nic") {
