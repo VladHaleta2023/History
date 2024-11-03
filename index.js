@@ -447,6 +447,31 @@ odkrWynKl3 = [
     new ObjectTest("Zygmunt Freud", "Psychoanaliza", undefined, undefined),
 ];
 
+twPozyt = [
+    new ObjectTest("Anton Czechow", "<br>Wujaszek Wania<br>Trzy siostry<br>Wiśniowy sad", undefined, undefined),
+    new ObjectTest("Auguste Comte", "Metoda pozytywna w szesnastu wykładach", undefined, undefined),
+    new ObjectTest("Auguste i Louis Lumière", "<br>Wyjście robotników z fabryki w Lyonie<br>Polewacz polany<br>Wjazd pociągu na stację w La Ciotat", undefined, undefined),
+    new ObjectTest("Auguste Rodin", "<br>Pocałunek<br>Myśliciel<br>Kupid i Psyche", undefined, undefined),
+    new ObjectTest("Camille Claudel", "<br>Fala<br>Walc<br>Wiek dojrzały", undefined, undefined),
+    new ObjectTest("Charles Dickens", "<br>Oliver Twist<br>David Copperfield<br>Wielkie nadzieje<br>Opowieść wigilijna", undefined, undefined),
+    new ObjectTest("Emil Zola", "<br>Germinal<br>W matni<br>Nana", undefined, undefined),
+    new ObjectTest("Fiodor Dostojewski", "<br>Zbrodnia i kara<br>Idiota<br>Bracia Karamazow", undefined, undefined),
+    new ObjectTest("Georges Melies", "Podróży na Księżyc", undefined, undefined),
+    new ObjectTest("Giacomo Puccini", "<br>Cyganeria<br>Tosca<br>Turandot<br>Madame Butterfly", undefined, undefined),
+    new ObjectTest("Giuseppe Verdi", "<br>Nabucco<br>Joanna dArc<br>Makbet<br>Otello<br>Rigoletto<br>Traviata<br>Aida<br>Falstaff", undefined, undefined),
+    new ObjectTest("Honore de Balzac", "<br>Ojciec Goriot<br>Stracone złudzenia", undefined, undefined),
+    new ObjectTest("Johann Strauss", "<br>Zemsta nietoperza<br>Baron cygański<br>Nad pięknym modrym Dunajem<br>Opowieści Lasku Wiedeńskiego", undefined, undefined),
+    new ObjectTest("Johannes Brahms", "<br>Koncerty skrzypcowe<br>Uwertury<br>Symfonie", undefined, undefined),
+    new ObjectTest("Joseph Conrad", "<br>Lord Jim<br>Jądro ciemności<br>Nostromo", undefined, undefined),
+    new ObjectTest("Karol Darwin", "O powstawaniu gatunków drogą doboru naturalnego", undefined, undefined),
+    new ObjectTest("Lew Tołstoj", "<br>Wojna i pokój<br>Anna Karenina", undefined, undefined),
+    new ObjectTest("Mark Twain", "<br>Przygody Hucka<br>Przygody Tomka Sawyera", undefined, undefined),
+    new ObjectTest("Piotr Czajkowski", "<br>Eugeniusz Oniegin<br>Jezioro łabędzie<br>Dziadek do orzechów<br>Uwertura Rok 1812", undefined, undefined),
+    new ObjectTest("Richard Strauss", "<br>Tako rzecze Zaratustra<br>Salome<br>Elektra", undefined, undefined),
+    new ObjectTest("Richard Wagner", "<br>Tannhäuser<br>Tristan i Izolda<br>Śpiewacy norymberscy<br>Parsifal<br>Tetralogia: Pierścień Nibelunga", undefined, undefined),
+    new ObjectTest("Victor Hugo", "Nędznicy", undefined, undefined),
+];
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
@@ -454,6 +479,7 @@ let testMusic80 = new Test(music80, "Autor Muzyki", "Nazwa Muzyki");
 let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
 let testMusic90 = new Test(music90, "Autor Muzyki", "Nazwa Muzyki");
 let testOdkrWynKl3 = new Test(odkrWynKl3, "Autor Odkrycia", "Nazwa Odkrycia")
+let testTwPozyt = new Test(twPozyt, "Autor Odkrycia", "Nazwa Odkrycia")
 
 function getVariantsAuthor(data) {
     result = [];
@@ -509,6 +535,8 @@ function getTest(dataSelected) {
             return testMusic90;
         case "Odkrywcy i Wynalazcy Klasa 3":
             return testOdkrWynKl3
+        case "Twórcy Pozytywizmu Klasa 3":
+            return testTwPozyt;
         default:
             return testPicturesBarok;
     }
