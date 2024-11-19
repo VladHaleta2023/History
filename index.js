@@ -472,6 +472,40 @@ twPozyt = [
     new ObjectTest("Victor Hugo", "Nędznicy", undefined, undefined),
 ];
 
+malPoz = [
+    new ObjectTest("Auguste Renoir", "Bal w Moulin de la Galette", ["./pictures/Malarstwo Pozytywizmu/1.jpg"], undefined),
+    new ObjectTest("Auguste Renoir", "Parasolki", ["./pictures/Malarstwo Pozytywizmu/2.jpg"], undefined),
+    new ObjectTest("Auguste Renoir", "Śniadanie wioślarzy", ["./pictures/Malarstwo Pozytywizmu/3.jpg"], undefined),
+    new ObjectTest("Camille Pissarro", "Boulevard Montmartre, efekt nocy", ["./pictures/Malarstwo Pozytywizmu/4.jpg"], undefined),
+    new ObjectTest("Claude Monet", "Dworzec Saint-Lazare", ["./pictures/Malarstwo Pozytywizmu/5.jpg"], undefined),
+    new ObjectTest("Claude Monet", "Impresja, wschód słońca", ["./pictures/Malarstwo Pozytywizmu/6.jpg"], undefined),
+    new ObjectTest("Edgar Degas", "Lekcja tańca", ["./pictures/Malarstwo Pozytywizmu/7.jpg"], undefined),
+    new ObjectTest("Edouard Manet", "Olimpia", ["./pictures/Malarstwo Pozytywizmu/8.jpg"], undefined),
+    new ObjectTest("Edouard Manet", "Śniadanie na trawie", ["./pictures/Malarstwo Pozytywizmu/9.jpg"], undefined),
+    new ObjectTest("Edvard Munch", "Krzyk", ["./pictures/Malarstwo Pozytywizmu/10_1.jpg"], undefined),
+    new ObjectTest("Edvard Munch", "Niepokój", ["./pictures/Malarstwo Pozytywizmu/10_2.jpg"], undefined),
+    new ObjectTest("Elihu Vedder", "Plejady", ["./pictures/Malarstwo Pozytywizmu/11.jpg"], undefined),
+    new ObjectTest("Georges Seurat", "Niedzielne popołudnie na wyspie Grande Jatte", ["./pictures/Malarstwo Pozytywizmu/12.jpg"], undefined),
+    new ObjectTest("Gustav Klimt", "Adele Bloch-Bauer", ["./pictures/Malarstwo Pozytywizmu/13.jpg"], undefined),
+    new ObjectTest("Gustav Klimt", "Pocałunek", ["./pictures/Malarstwo Pozytywizmu/14.jpg"], undefined),
+    new ObjectTest("Gustave Caillebotte", "Paryska ulica w deszczowy dzień", ["./pictures/Malarstwo Pozytywizmu/15.jpg"], undefined),
+    new ObjectTest("Gustave Caillebotte", "Cykliniarze", ["./pictures/Malarstwo Pozytywizmu/16.jpg"], undefined),
+    new ObjectTest("Henri Matisse", "Czerwony pokój lub Harmonia czerwieni", ["./pictures/Malarstwo Pozytywizmu/17.jpg"], undefined),
+    new ObjectTest("Henri Matisse", "Taniec", ["./pictures/Malarstwo Pozytywizmu/18.jpg"], undefined),
+    new ObjectTest("Henri Toulouse-Lautrec", "Rousse - La Toilette", ["./pictures/Malarstwo Pozytywizmu/19.jpg"], undefined),
+    new ObjectTest("Henri Toulouse-Lautrec", "W Moulin Rouge", ["./pictures/Malarstwo Pozytywizmu/20.jpg"], undefined),
+    new ObjectTest("Jean-Leon Gerome", "Diogenes", ["./pictures/Malarstwo Pozytywizmu/21.jpg"], undefined),
+    new ObjectTest("Jean-Leon Gerome", "Pollice Verso", ["./pictures/Malarstwo Pozytywizmu/22.jpg"], undefined),
+    new ObjectTest("Paul Cezanne", "Gracze w karty", ["./pictures/Malarstwo Pozytywizmu/23.jpg"], undefined),
+    new ObjectTest("Paul Cezanne", "Jabłka i pomarańcze", ["./pictures/Malarstwo Pozytywizmu/24.jpg"], undefined),
+    new ObjectTest("Paul Gauguin", "Nave nave moe", ["./pictures/Malarstwo Pozytywizmu/25.jpg"], undefined),
+    new ObjectTest("Paul Gauguin", "Praczki w Arles", ["./pictures/Malarstwo Pozytywizmu/26.jpg"], undefined),
+    new ObjectTest("Vincent van Gogh", "Gwiaździsta noc", ["./pictures/Malarstwo Pozytywizmu/27.jpg"], undefined),
+    new ObjectTest("Vincent van Gogh", "Pokój van Gogha w Arles", ["./pictures/Malarstwo Pozytywizmu/28.jpg"], undefined),
+    new ObjectTest("Vincent van Gogh", "Pole pszenicy z krukami", ["./pictures/Malarstwo Pozytywizmu/29.jpg"], undefined),
+    new ObjectTest("Vincent van Gogh", "Taras kawiarni w nocy", ["./pictures/Malarstwo Pozytywizmu/30.jpg"], undefined),
+]
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
@@ -480,6 +514,7 @@ let testPolishMusic80 = new Test(polishMusic80, "Autor Płyty", "Nazwa Płyty");
 let testMusic90 = new Test(music90, "Autor Muzyki", "Nazwa Muzyki");
 let testOdkrWynKl3 = new Test(odkrWynKl3, "Autor Odkrycia", "Nazwa Odkrycia")
 let testTwPozyt = new Test(twPozyt, "Autor Odkrycia", "Nazwa Odkrycia")
+let testMalPoz = new Test(malPoz, "Autor", "Nazwa");
 
 function getVariantsAuthor(data) {
     result = [];
@@ -537,6 +572,8 @@ function getTest(dataSelected) {
             return testOdkrWynKl3
         case "Twórcy Pozytywizmu Klasa 3":
             return testTwPozyt;
+        case "Malarstwo Pozytywizmu Klasa 3":
+            return testMalPoz;
         default:
             return testPicturesBarok;
     }
