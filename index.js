@@ -477,6 +477,7 @@ malPoz = [
     new ObjectTest("Auguste Renoir", "Parasolki", ["./pictures/Malarstwo Pozytywizmu/2.jpg"], undefined),
     new ObjectTest("Auguste Renoir", "Śniadanie wioślarzy", ["./pictures/Malarstwo Pozytywizmu/3.jpg"], undefined),
     new ObjectTest("Camille Pissarro", "Boulevard Montmartre, efekt nocy", ["./pictures/Malarstwo Pozytywizmu/4.jpg"], undefined),
+    new ObjectTest("Camille Pissarro", "Most Boieldieu w Rouen", ["./pictures/Malarstwo Pozytywizmu/31.jpg"], undefined),
     new ObjectTest("Claude Monet", "Dworzec Saint-Lazare", ["./pictures/Malarstwo Pozytywizmu/5.jpg"], undefined),
     new ObjectTest("Claude Monet", "Impresja, wschód słońca", ["./pictures/Malarstwo Pozytywizmu/6.jpg"], undefined),
     new ObjectTest("Edgar Degas", "Lekcja tańca", ["./pictures/Malarstwo Pozytywizmu/7.jpg"], undefined),
