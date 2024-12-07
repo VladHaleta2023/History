@@ -505,7 +505,34 @@ malPoz = [
     new ObjectTest("Vincent van Gogh", "Pokój van Gogha w Arles", ["./pictures/Malarstwo Pozytywizmu/28.jpg"], undefined),
     new ObjectTest("Vincent van Gogh", "Pole pszenicy z krukami", ["./pictures/Malarstwo Pozytywizmu/29.jpg"], undefined),
     new ObjectTest("Vincent van Gogh", "Taras kawiarni w nocy", ["./pictures/Malarstwo Pozytywizmu/30.jpg"], undefined),
-]
+];
+
+polTwKulNauki = [
+    new ObjectTest("Kazimierz Funk", "Zbadanie i opisanie witaminy B", undefined, undefined),
+    new ObjectTest("Gabriela Zapolska", "Moralność pani Dulskiej", undefined, undefined),
+    new ObjectTest("Kazimierz Prószyński", "Pleograf", undefined, undefined),
+    new ObjectTest("Stefan Żeromski", "Dzieje grzechu, Ludzie bezdomni, Popioły, Przedwiośnie, Siłaczka, Syzyfowe prace", undefined, undefined),
+    new ObjectTest("Mieczysław Karłowicz", "Symfonia Odrodzenie op.7", undefined, undefined),
+    new ObjectTest("Eliza Orzeszkowa", "Nad Niemnem", undefined, undefined),
+    new ObjectTest("Michał Bałucki", "Dom Otwarty, Klub kawalerów", undefined, undefined),
+    new ObjectTest("Stanisław Wyspiański", "Wesele, Wyzwolenie, Noc listopadowa", undefined, undefined),
+    new ObjectTest("Ludwig Zamenhof", "Język esperanto", undefined, undefined),
+    new ObjectTest("Adam Asnyk", "Nad głębiami", undefined, undefined),
+    new ObjectTest("Helena Mniszkówna", "Trędowata, Ordynat Michorowski", undefined, undefined),
+    new ObjectTest("Władysław Reymont", "Komediantka, Chłopi, Ziemia obiecana", undefined, undefined),
+    new ObjectTest("Cyprian Kamil Norwid", "Fortepian Szopena, Promethidion", undefined, undefined),
+    new ObjectTest("Marceli Nencki", "Bakterie zdolne do życia w strefie beztlenowej", undefined, undefined),
+    new ObjectTest("Bolesław Prus", "Lalka, Faraon, Emancypantki", undefined, undefined),
+    new ObjectTest("Tadeusz Boy-Żeleński", "Kabaret Zielony Balonik", undefined, undefined),
+    new ObjectTest("Wacław Sierpiński", " Teoria mnogości, teoria liczb i teoria funkcji rzeczywistych", undefined, undefined),
+    new ObjectTest("Kazimierz Przerwa", "Tetmajer, Na skalnym Podhalu, Otchłań", undefined, undefined),
+    new ObjectTest("Jan Szczepanik", "Telektroskop", undefined, undefined),
+    new ObjectTest("Karol Szymanowski", "Król Roger, Demeter, Stabat mater", undefined, undefined),
+    new ObjectTest("Henryk Sienkiewicz", "Trylogia, Krzyżacy, Quo Vadis, W pustyni i w puszczy", undefined, undefined),
+    new ObjectTest("Józef Ignacy Kraszewski", "Stara baśń", undefined, undefined),
+    new ObjectTest("Maria Konopnicka", "Rota, O krasnoludkach i o sierotce Marysi", undefined, undefined),
+    new ObjectTest("Stanisław Moniuszko", "Halka, Straszny dwór, Prząśniczka", undefined, undefined),
+];
 
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
@@ -516,6 +543,7 @@ let testMusic90 = new Test(music90, "Autor Muzyki", "Nazwa Muzyki");
 let testOdkrWynKl3 = new Test(odkrWynKl3, "Autor Odkrycia", "Nazwa Odkrycia")
 let testTwPozyt = new Test(twPozyt, "Autor Odkrycia", "Nazwa Odkrycia")
 let testMalPoz = new Test(malPoz, "Autor", "Nazwa");
+let testPolTwKulNauki = new Test(polTwKulNauki, "Autor", "Nazwa");
 
 function getVariantsAuthor(data) {
     result = [];
@@ -575,6 +603,8 @@ function getTest(dataSelected) {
             return testTwPozyt;
         case "Malarstwo Pozytywizmu Klasa 3":
             return testMalPoz;
+        case "Polscy twórcy kultury i nauki Przełomu XIX i XX wieku":
+            return testPolTwKulNauki;
         default:
             return testPicturesBarok;
     }
