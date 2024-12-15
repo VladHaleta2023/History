@@ -534,6 +534,41 @@ polTwKulNauki = [
     new ObjectTest("Stanisław Moniuszko", "Halka, Straszny dwór, Prząśniczka", undefined, undefined),
 ];
 
+malPolPozyt = [
+    new ObjectTest("Aleksander Gierymski", "Trumna chłopska", ["./pictures/Polskie Malarstwo XIX - początek XX/1.jpg"], undefined),
+    new ObjectTest("Aleksander Gierymski", "W altanie", ["./pictures/Polskie Malarstwo XIX - początek XX/2.jpg"], undefined),
+    new ObjectTest("Aleksander Gierymski", "Żydówka z pomarańczami", ["./pictures/Polskie Malarstwo XIX - początek XX/3.jpg"], undefined),
+    new ObjectTest("Edward Okuń", "Chimera", ["./pictures/Polskie Malarstwo XIX - początek XX/4.jpg"], undefined),
+    new ObjectTest("Henryk Siemiradzki", "Dirce chrześcijańska", ["./pictures/Polskie Malarstwo XIX - początek XX/5.jpg"], undefined),
+    new ObjectTest("Henryk Siemiradzki", "Pochodnie Nerona", ["./pictures/Polskie Malarstwo XIX - początek XX/6.jpg"], undefined),
+    new ObjectTest("Jacek Malczewski", "Błędne koło", ["./pictures/Polskie Malarstwo XIX - początek XX/7.jpg"], undefined),
+    new ObjectTest("Jacek Malczewski", "Hamlet polski", ["./pictures/Polskie Malarstwo XIX - początek XX/8.jpg"], undefined),
+    new ObjectTest("Jan Matejko", "Astronom Kopernik, czyli rozmowa z Bogiem", ["./pictures/Polskie Malarstwo XIX - początek XX/9.jpg"], undefined),
+    new ObjectTest("Jan Matejko", "Stańczyk w czasie balu na dworze królowej Bony wobec straconego Smoleńska", ["./pictures/Polskie Malarstwo XIX - początek XX/10.jpg"], undefined),
+    new ObjectTest("Jan Stanisławski", "Ule", ["./pictures/Polskie Malarstwo XIX - początek XX/11.jpg"], undefined),
+    new ObjectTest("Józef Chełmoński", "Babie lato", ["./pictures/Polskie Malarstwo XIX - początek XX/12.jpg"], undefined),
+    new ObjectTest("Józef Chełmoński", "Bociany", ["./pictures/Polskie Malarstwo XIX - początek XX/13.jpg"], undefined),
+    new ObjectTest("Józef Mehoffer", "Dziwny ogród", ["./pictures/Polskie Malarstwo XIX - początek XX/14.jpg"], undefined),
+    new ObjectTest("Józef Mehoffer", "Słońce majowe", ["./pictures/Polskie Malarstwo XIX - początek XX/15.jpg"], undefined),
+    new ObjectTest("Józef Pankiewicz", "Ulica w Madrycie", ["./pictures/Polskie Malarstwo XIX - początek XX/16.jpg"], undefined),
+    new ObjectTest("Julian Fałat", "Oszczepnicy (Polowanie na niedźwiedzia)", ["./pictures/Polskie Malarstwo XIX - początek XX/17.jpg"], undefined),
+    new ObjectTest("Kazimierz Stabrowski", "Paw - Zofia z Jakimowiczów Borucinska w kostiumie z balu panny młodej", ["./pictures/Polskie Malarstwo XIX - początek XX/18.jpg"], undefined),
+    new ObjectTest("Konrad Krzyżanowski", "Przy świecach", ["./pictures/Polskie Malarstwo XIX - początek XX/19.jpg"], undefined),
+    new ObjectTest("Leon Wyczółkowski", "Rybacy brodzący w wodzie", ["./pictures/Polskie Malarstwo XIX - początek XX/20.jpg"], undefined),
+    new ObjectTest("Leon Wyczółkowski", "Stańczyk", ["./pictures/Polskie Malarstwo XIX - początek XX/21.jpg"], undefined),
+    new ObjectTest("Olga Boznańska", "Dziewczynka z chryzantemami", ["./pictures/Polskie Malarstwo XIX - początek XX/22.jpg"], undefined),
+    new ObjectTest("Olga Boznańska", "Kwiaciarki", ["./pictures/Polskie Malarstwo XIX - początek XX/23.jpg"], undefined),
+    new ObjectTest("Stanisław Wyspiański", "Śpiący Staś", ["./pictures/Polskie Malarstwo XIX - początek XX/24.jpg"], undefined),
+    new ObjectTest("Stanisław Wyspiański", "Planty o świcie", ["./pictures/Polskie Malarstwo XIX - początek XX/25.jpg"], undefined),
+    new ObjectTest("Witold Wojtkiewicz", "Orka", ["./pictures/Polskie Malarstwo XIX - początek XX/26.jpg"], undefined),
+    new ObjectTest("Władysław Podkowiński", "Dzieci w ogrodzie", ["./pictures/Polskie Malarstwo XIX - początek XX/27.jpg"], undefined),
+    new ObjectTest("Władysław Podkowiński", "Szał uniesień", ["./pictures/Polskie Malarstwo XIX - początek XX/28.jpg"], undefined),
+    new ObjectTest("Władysław Ślewiński", "Czesząca się", ["./pictures/Polskie Malarstwo XIX - początek XX/29.jpg"], undefined),
+    new ObjectTest("Wojciech Kossak", "Olszynka Grochowska", ["./pictures/Polskie Malarstwo XIX - początek XX/30.jpg"], undefined),
+    new ObjectTest("Wojciech Kossak", "Orlęta lwowskie", ["./pictures/Polskie Malarstwo XIX - początek XX/31.jpg"], undefined),
+    new ObjectTest("Wojciech Weiss", "Opętanie", ["./pictures/Polskie Malarstwo XIX - początek XX/32.jpg"], undefined),
+];
+
 let testPicturesBarok = new Test(picturesBarok, "Autor", "Nazwa");
 let testMusic70 = new Test(music70, "Autor Muzyki", "Nazwa Muzyki");
 let testOswiecenie = new Test(oswiecenie, "Osoba", "Co zrobił(a)");
@@ -544,6 +579,7 @@ let testOdkrWynKl3 = new Test(odkrWynKl3, "Autor Odkrycia", "Nazwa Odkrycia")
 let testTwPozyt = new Test(twPozyt, "Autor Odkrycia", "Nazwa Odkrycia")
 let testMalPoz = new Test(malPoz, "Autor", "Nazwa");
 let testPolTwKulNauki = new Test(polTwKulNauki, "Autor", "Nazwa");
+let testMalPolPozyt = new Test(malPolPozyt, "Autor", "Nazwa");
 
 function getVariantsAuthor(data) {
     result = [];
@@ -605,6 +641,8 @@ function getTest(dataSelected) {
             return testMalPoz;
         case "Polscy twórcy kultury i nauki Przełomu XIX i XX wieku":
             return testPolTwKulNauki;
+        case "Malarstwo polskie XIX w. i początku XX w.":
+            return testMalPolPozyt;
         default:
             return testPicturesBarok;
     }

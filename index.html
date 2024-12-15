@@ -265,6 +265,7 @@
 
     div.form-groupRes {
         width: 100%;
+        max-width: 800px;
         padding: 14px !important;
         text-align: left !important;
         color: black !important;
@@ -388,9 +389,10 @@
                 <div class="selectMenu" id="selectMenuData">
                     <span class="textMenu">Test:</span>
                     <div class="dropdown" id="Data">
-                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Polscy twórcy kultury i nauki Przełomu XIX i XX wieku
+                        <button class="btn dropdown-toggle inputBtn" type="button" id="menuData" data-toggle="dropdown">Malarstwo polskie XIX w. i początku XX w.
                         <span class="caret"></span></button>
                         <ul class="dropdown-menu">
+                            <li><a href="#">Malarstwo polskie XIX w. i początku XX w.</a></li>
                             <li><a href="#">Polscy twórcy kultury i nauki Przełomu XIX i XX wieku</a></li>
                             <li><a href="#">Malarstwo Pozytywizmu Klasa 3</a></li>
                             <li><a href="#">Twórcy Pozytywizmu Klasa 3</a></li>
@@ -598,8 +600,8 @@
 </body>
 <script src="index.js"></script>
 <script>
-    var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Polscy twórcy kultury i nauki Przełomu XIX i XX wieku", data = testPicturesBarok.data;
-    let selectedTest = testPicturesBarok, variant = "input", selectedMenuList = "Tylko Nazwę", dataIndex = undefined, onLoad = true;
+    var menu = "Tylko Nazwę", autor = "", name = "", img="", dataSelected = "Malarstwo polskie XIX w. i początku XX w.", data = testPicturesBarok.data;
+    let selectedTest = testPicturesBarok, variant = "select", selectedMenuList = "Tylko Nazwę", dataIndex = undefined, onLoad = true;
 
     // Audio
     function selectAudio(audio) {
